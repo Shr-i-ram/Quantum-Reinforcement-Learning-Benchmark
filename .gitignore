@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Checkpoints and Trained Model Weights
+*.pt
+*.pth
+*.ckpt
+*.bin
+quantum_rl_benchmark/results/checkpoints/*
+!quantum_rl_benchmark/results/checkpoints/.gitkeep
+
+# IDEs and Code Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local Development / Agent Caches
+.freebuff/
+scratch/
+
+# Build and Distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+eggs/
+*.egg
+
+# Testing and Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Jupyter / IPython
+.ipynb_checkpoints
+
+# Logs
+*.log

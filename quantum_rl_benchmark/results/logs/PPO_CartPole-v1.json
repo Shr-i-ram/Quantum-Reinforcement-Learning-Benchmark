@@ -1,0 +1,53 @@
+{
+  "experiment_key": "PPO_CartPole-v1",
+  "status": "completed",
+  "start_time": 1787254297.5004208,
+  "end_time": 1787254372.011625,
+  "total_steps": 100000,
+  "episodes": 4202,
+  "algorithm": "PPO",
+  "environment": "CartPole-v1",
+  "resumed": false,
+  "start_step": 0,
+  "total_timesteps": 100000,
+  "seed": 42,
+  "quantum_config": {},
+  "avg_reward_recent": 26.02,
+  "training_time": 25.051128387451172,
+  "checkpoint_step": 100000,
+  "eval_results": {
+    "mean_return": 108.4,
+    "std_return": 5.986651818838307,
+    "min_return": 100.0,
+    "max_return": 120.0,
+    "median_return": 109.5,
+    "mean_length": 108.4,
+    "eval_time": 0.3710951805114746,
+    "n_episodes": 10,
+    "episode_returns": [
+      110.0,
+      113.0,
+      120.0,
+      103.0,
+      109.0,
+      110.0,
+      100.0,
+      106.0,
+      100.0,
+      113.0
+    ],
+    "episode_lengths": [
+      110,
+      113,
+      120,
+      103,
+      109,
+      110,
+      100,
+      106,
+      100,
+      113
+    ]
+  },
+  "best_eval_return": 108.4
+}

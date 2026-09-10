@@ -1,0 +1,53 @@
+{
+  "experiment_key": "PPO_MountainCar-v0",
+  "status": "completed",
+  "start_time": 1787257068.945937,
+  "end_time": 1787257145.9420722,
+  "total_steps": 100000,
+  "episodes": 500,
+  "algorithm": "PPO",
+  "environment": "MountainCar-v0",
+  "resumed": false,
+  "start_step": 0,
+  "total_timesteps": 100000,
+  "seed": 42,
+  "quantum_config": {},
+  "avg_reward_recent": -200.0,
+  "training_time": 29.077467441558838,
+  "checkpoint_step": 100000,
+  "eval_results": {
+    "mean_return": -200.0,
+    "std_return": 0.0,
+    "min_return": -200.0,
+    "max_return": -200.0,
+    "median_return": -200.0,
+    "mean_length": 200.0,
+    "eval_time": 0.6675317287445068,
+    "n_episodes": 10,
+    "episode_returns": [
+      -200.0,
+      -200.0,
+      -200.0,
+      -200.0,
+      -200.0,
+      -200.0,
+      -200.0,
+      -200.0,
+      -200.0,
+      -200.0
+    ],
+    "episode_lengths": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ]
+  },
+  "best_eval_return": -200.0
+}

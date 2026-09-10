@@ -1,0 +1,53 @@
+{
+  "experiment_key": "Q-PPO_LunarLander-v3",
+  "status": "completed",
+  "start_time": 1787259851.3868084,
+  "end_time": 1787263778.9249518,
+  "total_steps": 150000,
+  "episodes": 1621,
+  "algorithm": "Q-PPO",
+  "environment": "LunarLander-v3",
+  "resumed": false,
+  "start_step": 0,
+  "total_timesteps": 150000,
+  "seed": 42,
+  "quantum_config": {},
+  "avg_reward_recent": -185.43248459916555,
+  "training_time": 3181.805462360382,
+  "checkpoint_step": 150000,
+  "eval_results": {
+    "mean_return": -375.8292557257397,
+    "std_return": 107.8654634801094,
+    "min_return": -554.2601834042728,
+    "max_return": -208.7375947702942,
+    "median_return": -385.9007554938835,
+    "mean_length": 67.6,
+    "eval_time": 4.774682521820068,
+    "n_episodes": 10,
+    "episode_returns": [
+      -501.15385527524074,
+      -365.67916082548123,
+      -406.1223501622858,
+      -208.7375947702942,
+      -271.5906479247725,
+      -407.820745684448,
+      -554.2601834042728,
+      -478.22774097329267,
+      -279.69225414082985,
+      -285.0080240964787
+    ],
+    "episode_lengths": [
+      54,
+      58,
+      72,
+      90,
+      55,
+      49,
+      80,
+      56,
+      77,
+      85
+    ]
+  },
+  "best_eval_return": -375.8292557257397
+}

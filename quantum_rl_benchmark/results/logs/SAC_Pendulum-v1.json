@@ -1,0 +1,15 @@
+{
+  "experiment_key": "SAC_Pendulum-v1",
+  "status": "interrupted",
+  "start_time": 1788449077.8551693,
+  "end_time": 1788449077.8915224,
+  "total_steps": 0,
+  "episodes": 0,
+  "algorithm": "SAC",
+  "environment": "Pendulum-v1",
+  "resumed": true,
+  "start_step": 0,
+  "total_timesteps": 100000,
+  "seed": 42,
+  "quantum_config": {}
+}

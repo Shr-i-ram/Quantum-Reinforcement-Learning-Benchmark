@@ -1,0 +1,18 @@
+# Core Reinforcement Learning Environments
+gymnasium[classic-control,box2d]>=0.29.0
+
+# Deep Learning Framework
+torch>=2.0.0
+
+# Quantum Machine Learning Framework & High-Performance State Simulator
+pennylane>=0.35.0
+pennylane-lightning>=0.35.0
+
+# Scientific Computing & Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+
+# Plotting and Visualizations
+matplotlib>=3.7.0

@@ -1,0 +1,53 @@
+{
+  "experiment_key": "PPO_BipedalWalker-v3",
+  "status": "completed",
+  "start_time": 1787263779.0778096,
+  "end_time": 1787263960.435673,
+  "total_steps": 150000,
+  "episodes": 541,
+  "algorithm": "PPO",
+  "environment": "BipedalWalker-v3",
+  "resumed": false,
+  "start_step": 0,
+  "total_timesteps": 150000,
+  "seed": 42,
+  "quantum_config": {},
+  "avg_reward_recent": -143.45423889160156,
+  "training_time": 45.07982063293457,
+  "checkpoint_step": 150000,
+  "eval_results": {
+    "mean_return": -165.41213989257812,
+    "std_return": 27.760927200317383,
+    "min_return": -179.3047637939453,
+    "max_return": -107.44805908203125,
+    "median_return": -179.27560424804688,
+    "mean_length": 1304.0,
+    "eval_time": 7.187239408493042,
+    "n_episodes": 10,
+    "episode_returns": [
+      -179.2982177734375,
+      -107.44805908203125,
+      -179.26837158203125,
+      -179.2778778076172,
+      -179.3047637939453,
+      -112.42164611816406,
+      -179.27377319335938,
+      -179.2713623046875,
+      -179.27981567382812,
+      -179.2774200439453
+    ],
+    "episode_lengths": [
+      1600,
+      102,
+      1600,
+      1600,
+      1600,
+      138,
+      1600,
+      1600,
+      1600,
+      1600
+    ]
+  },
+  "best_eval_return": -165.41213989257812
+}

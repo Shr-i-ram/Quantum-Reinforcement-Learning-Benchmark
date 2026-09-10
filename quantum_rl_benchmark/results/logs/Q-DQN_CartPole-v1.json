@@ -1,0 +1,53 @@
+{
+  "experiment_key": "Q-DQN_CartPole-v1",
+  "status": "completed",
+  "start_time": 1788002832.8083525,
+  "end_time": 1788008309.550255,
+  "total_steps": 100000,
+  "episodes": 705,
+  "algorithm": "Q-DQN",
+  "environment": "CartPole-v1",
+  "resumed": true,
+  "start_step": 90000,
+  "total_timesteps": 100000,
+  "seed": 42,
+  "quantum_config": {},
+  "avg_reward_recent": 362.55,
+  "training_time": 65503.746534347534,
+  "checkpoint_step": 100000,
+  "eval_results": {
+    "mean_return": 98.7,
+    "std_return": 2.6095976701399777,
+    "min_return": 94.0,
+    "max_return": 102.0,
+    "median_return": 99.5,
+    "mean_length": 98.7,
+    "eval_time": 2.589022159576416,
+    "n_episodes": 10,
+    "episode_returns": [
+      100.0,
+      96.0,
+      96.0,
+      101.0,
+      99.0,
+      97.0,
+      101.0,
+      102.0,
+      101.0,
+      94.0
+    ],
+    "episode_lengths": [
+      100,
+      96,
+      96,
+      101,
+      99,
+      97,
+      101,
+      102,
+      101,
+      94
+    ]
+  },
+  "best_eval_return": 500.0
+}

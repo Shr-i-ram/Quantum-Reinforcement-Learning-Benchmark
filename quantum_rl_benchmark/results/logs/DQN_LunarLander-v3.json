@@ -1,0 +1,53 @@
+{
+  "experiment_key": "DQN_LunarLander-v3",
+  "status": "completed",
+  "start_time": 1788407349.446764,
+  "end_time": 1788407786.4846985,
+  "total_steps": 150000,
+  "episodes": 300,
+  "algorithm": "DQN",
+  "environment": "LunarLander-v3",
+  "resumed": true,
+  "start_step": 0,
+  "total_timesteps": 150000,
+  "seed": 42,
+  "quantum_config": {},
+  "avg_reward_recent": 220.36764223219168,
+  "training_time": 385.32533740997314,
+  "checkpoint_step": 150000,
+  "eval_results": {
+    "mean_return": 122.53496527581271,
+    "std_return": 117.51584871005898,
+    "min_return": -120.75114520565555,
+    "max_return": 277.66385213019777,
+    "median_return": 145.47604617609943,
+    "mean_length": 743.9,
+    "eval_time": 0.6510345935821533,
+    "n_episodes": 10,
+    "episode_returns": [
+      272.15322129320964,
+      146.29247200675073,
+      116.63401137154194,
+      -120.75114520565555,
+      -38.54714164502654,
+      176.55516412212145,
+      144.65962034544816,
+      277.66385213019777,
+      90.05412600100136,
+      160.63547233853814
+    ],
+    "episode_lengths": [
+      348,
+      1000,
+      1000,
+      142,
+      1000,
+      1000,
+      1000,
+      250,
+      1000,
+      699
+    ]
+  },
+  "best_eval_return": 122.53496527581271
+}

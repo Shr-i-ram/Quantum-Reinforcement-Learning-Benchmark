@@ -1,0 +1,15 @@
+{
+  "experiment_key": "SAC_BipedalWalker-v3",
+  "status": "interrupted",
+  "start_time": 1788449077.9606395,
+  "end_time": 1788449078.0029936,
+  "total_steps": 0,
+  "episodes": 0,
+  "algorithm": "SAC",
+  "environment": "BipedalWalker-v3",
+  "resumed": true,
+  "start_step": 0,
+  "total_timesteps": 150000,
+  "seed": 42,
+  "quantum_config": {}
+}

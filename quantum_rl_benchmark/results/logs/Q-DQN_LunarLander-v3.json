@@ -1,0 +1,18 @@
+{
+  "experiment_key": "Q-DQN_LunarLander-v3",
+  "status": "interrupted",
+  "start_time": 1788407787.1796265,
+  "end_time": 1788449077.8143575,
+  "total_steps": 69000,
+  "episodes": 602,
+  "algorithm": "Q-DQN",
+  "environment": "LunarLander-v3",
+  "resumed": true,
+  "start_step": 0,
+  "total_timesteps": 150000,
+  "seed": 42,
+  "quantum_config": {},
+  "avg_reward_recent": -264.71347979705513,
+  "training_time": 40263.34335017204,
+  "checkpoint_step": 60000
+}

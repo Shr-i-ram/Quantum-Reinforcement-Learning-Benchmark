@@ -1,0 +1,53 @@
+{
+  "experiment_key": "PPO_Pendulum-v1",
+  "status": "completed",
+  "start_time": 1787260294.4292943,
+  "end_time": 1787260383.2682424,
+  "total_steps": 100000,
+  "episodes": 500,
+  "algorithm": "PPO",
+  "environment": "Pendulum-v1",
+  "resumed": false,
+  "start_step": 0,
+  "total_timesteps": 100000,
+  "seed": 42,
+  "quantum_config": {},
+  "avg_reward_recent": -1408.9094965095805,
+  "training_time": 35.090473651885986,
+  "checkpoint_step": 100000,
+  "eval_results": {
+    "mean_return": -1409.9220157992288,
+    "std_return": 265.6922422844881,
+    "min_return": -1663.8606309016002,
+    "max_return": -856.0640859616582,
+    "median_return": -1497.6945767070006,
+    "mean_length": 200.0,
+    "eval_time": 0.4610586166381836,
+    "n_episodes": 10,
+    "episode_returns": [
+      -1016.7959569977289,
+      -1463.6205618989572,
+      -1497.6820479265716,
+      -856.0640859616582,
+      -1497.7071054874293,
+      -1631.1740543666144,
+      -1663.8606309016002,
+      -1242.1321819393274,
+      -1598.5777370260148,
+      -1631.605795486384
+    ],
+    "episode_lengths": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ]
+  },
+  "best_eval_return": -1409.9220157992288
+}

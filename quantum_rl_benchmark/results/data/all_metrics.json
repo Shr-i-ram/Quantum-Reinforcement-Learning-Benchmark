@@ -1,0 +1,889 @@
+{
+  "summary_table": [
+    {
+      "algorithm": "PPO",
+      "environment": "BipedalWalker-v3",
+      "mean_return": -165.41213989257812,
+      "std_return": 27.760927200317383,
+      "best_return": -107.44805908203125,
+      "median_return": -179.27560424804688,
+      "total_steps": 150000,
+      "episodes": 541,
+      "training_time_s": 45.07982063293457,
+      "n_parameters": 6089,
+      "is_quantum": false
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "BipedalWalker-v3",
+      "mean_return": -143.27955627441406,
+      "std_return": 1.9379463195800781,
+      "best_return": -142.5812225341797,
+      "median_return": -142.6474609375,
+      "total_steps": 150000,
+      "episodes": 223,
+      "training_time_s": 3063.2523760795593,
+      "n_parameters": 8573,
+      "is_quantum": true
+    },
+    {
+      "algorithm": "DQN",
+      "environment": "CartPole-v1",
+      "mean_return": 154.6,
+      "std_return": 2.727636339397171,
+      "best_return": 159.0,
+      "median_return": 154.5,
+      "total_steps": 100000,
+      "episodes": 812,
+      "training_time_s": 306.7179808616638,
+      "n_parameters": 17410,
+      "is_quantum": false
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "CartPole-v1",
+      "mean_return": 108.4,
+      "std_return": 5.986651818838307,
+      "best_return": 120.0,
+      "median_return": 109.5,
+      "total_steps": 100000,
+      "episodes": 4202,
+      "training_time_s": 25.051128387451172,
+      "n_parameters": 4675,
+      "is_quantum": false
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "CartPole-v1",
+      "mean_return": 98.7,
+      "std_return": 2.6095976701399777,
+      "best_return": 102.0,
+      "median_return": 99.5,
+      "total_steps": 100000,
+      "episodes": 705,
+      "training_time_s": 65503.746534347534,
+      "n_parameters": 19310,
+      "is_quantum": true
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "CartPole-v1",
+      "mean_return": 192.5,
+      "std_return": 27.605253123273474,
+      "best_return": 252.0,
+      "median_return": 185.5,
+      "total_steps": 100000,
+      "episodes": 4228,
+      "training_time_s": 2351.149189710617,
+      "n_parameters": 5999,
+      "is_quantum": true
+    },
+    {
+      "algorithm": "DQN",
+      "environment": "LunarLander-v3",
+      "mean_return": 122.53496527581271,
+      "std_return": 117.51584871005898,
+      "best_return": 277.66385213019777,
+      "median_return": 145.47604617609943,
+      "total_steps": 150000,
+      "episodes": 300,
+      "training_time_s": 385.32533740997314,
+      "n_parameters": 18180,
+      "is_quantum": false
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "LunarLander-v3",
+      "mean_return": -568.4522571103792,
+      "std_return": 164.93316500075812,
+      "best_return": -371.0797484155163,
+      "median_return": -507.9401991909744,
+      "total_steps": 150000,
+      "episodes": 1592,
+      "training_time_s": 44.44811415672302,
+      "n_parameters": 5061,
+      "is_quantum": false
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "LunarLander-v3",
+      "mean_return": -375.8292557257397,
+      "std_return": 107.8654634801094,
+      "best_return": -208.7375947702942,
+      "median_return": -385.9007554938835,
+      "total_steps": 150000,
+      "episodes": 1621,
+      "training_time_s": 3181.805462360382,
+      "n_parameters": 6521,
+      "is_quantum": true
+    },
+    {
+      "algorithm": "DQN",
+      "environment": "MountainCar-v0",
+      "mean_return": -141.3,
+      "std_return": 38.45529872462311,
+      "best_return": -115.0,
+      "median_return": -116.5,
+      "total_steps": 100000,
+      "episodes": 554,
+      "training_time_s": 242.8329164981842,
+      "n_parameters": 17283,
+      "is_quantum": false
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "MountainCar-v0",
+      "mean_return": -200.0,
+      "std_return": 0.0,
+      "best_return": -200.0,
+      "median_return": -200.0,
+      "total_steps": 100000,
+      "episodes": 500,
+      "training_time_s": 29.077467441558838,
+      "n_parameters": 4612,
+      "is_quantum": false
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "MountainCar-v0",
+      "mean_return": -200.0,
+      "std_return": 0.0,
+      "best_return": -200.0,
+      "median_return": -200.0,
+      "total_steps": 100000,
+      "episodes": 500,
+      "training_time_s": 54461.29609107971,
+      "n_parameters": 19059,
+      "is_quantum": true
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "MountainCar-v0",
+      "mean_return": -200.0,
+      "std_return": 0.0,
+      "best_return": -200.0,
+      "median_return": -200.0,
+      "total_steps": 100000,
+      "episodes": 500,
+      "training_time_s": 2422.331154346466,
+      "n_parameters": 5748,
+      "is_quantum": true
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "Pendulum-v1",
+      "mean_return": -1409.9220157992288,
+      "std_return": 265.6922422844881,
+      "best_return": -856.0640859616582,
+      "median_return": -1497.6945767070006,
+      "total_steps": 100000,
+      "episodes": 500,
+      "training_time_s": 35.090473651885986,
+      "n_parameters": 4547,
+      "is_quantum": false
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "Pendulum-v1",
+      "mean_return": -1353.8126874435734,
+      "std_return": 211.8377579242248,
+      "best_return": -1036.0826073158828,
+      "median_return": -1352.0816078963985,
+      "total_steps": 100000,
+      "episodes": 500,
+      "training_time_s": 2406.292176961899,
+      "n_parameters": 5867,
+      "is_quantum": true
+    }
+  ],
+  "performance_comparison": {
+    "BipedalWalker-v3": {
+      "PPO": {
+        "mean_return": -165.41213989257812,
+        "is_quantum": false
+      },
+      "Q-PPO": {
+        "mean_return": -143.27955627441406,
+        "is_quantum": true
+      }
+    },
+    "Pendulum-v1": {
+      "PPO": {
+        "mean_return": -1409.9220157992288,
+        "is_quantum": false
+      },
+      "Q-PPO": {
+        "mean_return": -1353.8126874435734,
+        "is_quantum": true
+      }
+    },
+    "MountainCar-v0": {
+      "DQN": {
+        "mean_return": -141.3,
+        "is_quantum": false
+      },
+      "PPO": {
+        "mean_return": -200.0,
+        "is_quantum": false
+      },
+      "Q-DQN": {
+        "mean_return": -200.0,
+        "is_quantum": true
+      },
+      "Q-PPO": {
+        "mean_return": -200.0,
+        "is_quantum": true
+      }
+    },
+    "CartPole-v1": {
+      "DQN": {
+        "mean_return": 154.6,
+        "is_quantum": false
+      },
+      "PPO": {
+        "mean_return": 108.4,
+        "is_quantum": false
+      },
+      "Q-DQN": {
+        "mean_return": 98.7,
+        "is_quantum": true
+      },
+      "Q-PPO": {
+        "mean_return": 192.5,
+        "is_quantum": true
+      }
+    },
+    "LunarLander-v3": {
+      "DQN": {
+        "mean_return": 122.53496527581271,
+        "is_quantum": false
+      },
+      "PPO": {
+        "mean_return": -568.4522571103792,
+        "is_quantum": false
+      },
+      "Q-PPO": {
+        "mean_return": -375.8292557257397,
+        "is_quantum": true
+      }
+    }
+  },
+  "sample_efficiency_table": [
+    {
+      "algorithm": "DQN",
+      "environment": "CartPole-v1",
+      "aulc": 0.23415236469514758,
+      "episodes": 812,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "DQN",
+      "environment": "LunarLander-v3",
+      "aulc": 0.7410453211693225,
+      "episodes": 300,
+      "total_steps": 150000
+    },
+    {
+      "algorithm": "DQN",
+      "environment": "MountainCar-v0",
+      "aulc": 0.17737106265143643,
+      "episodes": 554,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "BipedalWalker-v3",
+      "aulc": 0.8694914930206081,
+      "episodes": 541,
+      "total_steps": 150000
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "CartPole-v1",
+      "aulc": 0.14346244539586642,
+      "episodes": 4202,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "LunarLander-v3",
+      "aulc": 0.5791976292888176,
+      "episodes": 1592,
+      "total_steps": 150000
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "MountainCar-v0",
+      "aulc": 0.498960498960499,
+      "episodes": 500,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "Pendulum-v1",
+      "aulc": 0.2582647701309589,
+      "episodes": 500,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "CartPole-v1",
+      "aulc": 0.27567493896513307,
+      "episodes": 705,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "MountainCar-v0",
+      "aulc": 0.004158004158004167,
+      "episodes": 500,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "BipedalWalker-v3",
+      "aulc": 0.766530132975308,
+      "episodes": 223,
+      "total_steps": 150000
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "CartPole-v1",
+      "aulc": 0.12933417961118343,
+      "episodes": 4228,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "LunarLander-v3",
+      "aulc": 0.6510188537225599,
+      "episodes": 1621,
+      "total_steps": 150000
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "MountainCar-v0",
+      "aulc": 0.498960498960499,
+      "episodes": 500,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "Pendulum-v1",
+      "aulc": 0.42893534276248074,
+      "episodes": 500,
+      "total_steps": 100000
+    }
+  ],
+  "stability_table": [
+    {
+      "algorithm": "DQN",
+      "environment": "CartPole-v1",
+      "reward_std": 95.54654354578864,
+      "reward_fluctuation": 0.7769878755845775,
+      "max_drawdown": 0.6256965944078731
+    },
+    {
+      "algorithm": "DQN",
+      "environment": "LunarLander-v3",
+      "reward_std": 176.10425668564505,
+      "reward_fluctuation": 2.2083427078029,
+      "max_drawdown": 1.2930327110599764
+    },
+    {
+      "algorithm": "DQN",
+      "environment": "MountainCar-v0",
+      "reward_std": 29.08348800814852,
+      "reward_fluctuation": 0.16112896871496485,
+      "max_drawdown": 0.12163616791376881
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "BipedalWalker-v3",
+      "reward_std": 37.432657635107226,
+      "reward_fluctuation": 0.3032944462993254,
+      "max_drawdown": 0.7197991207989896
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "CartPole-v1",
+      "reward_std": 13.514155017968017,
+      "reward_fluctuation": 0.5679840702711061,
+      "max_drawdown": 0.5557011794087282
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "LunarLander-v3",
+      "reward_std": 109.31206681878847,
+      "reward_fluctuation": 0.6094244355486778,
+      "max_drawdown": 1.1622692093805178
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "MountainCar-v0",
+      "reward_std": 0.0,
+      "reward_fluctuation": 0.0,
+      "max_drawdown": 0.0
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "Pendulum-v1",
+      "reward_std": 222.73090583957574,
+      "reward_fluctuation": 0.15516610897968638,
+      "max_drawdown": 0.20104954740286765
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "CartPole-v1",
+      "reward_std": 139.0153782448616,
+      "reward_fluctuation": 0.9803034924302705,
+      "max_drawdown": 0.6685418045297035
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "MountainCar-v0",
+      "reward_std": 5.7280768151273955,
+      "reward_fluctuation": 0.028704107192168385,
+      "max_drawdown": 0.02854204165448491
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "BipedalWalker-v3",
+      "reward_std": 26.745741678438563,
+      "reward_fluctuation": 0.20375408132493808,
+      "max_drawdown": 0.35007255650814745
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "CartPole-v1",
+      "reward_std": 13.166151517852347,
+      "reward_fluctuation": 0.5567372617834405,
+      "max_drawdown": 0.5688888887203293
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "LunarLander-v3",
+      "reward_std": 115.13752168844213,
+      "reward_fluctuation": 0.6118529360647901,
+      "max_drawdown": 1.2768298556577964
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "MountainCar-v0",
+      "reward_std": 0.0,
+      "reward_fluctuation": 0.0,
+      "max_drawdown": 0.0
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "Pendulum-v1",
+      "reward_std": 187.4653095800953,
+      "reward_fluctuation": 0.13832502511392408,
+      "max_drawdown": 0.19126313168130948
+    }
+  ],
+  "computational_cost_table": [
+    {
+      "algorithm": "DQN",
+      "environment": "CartPole-v1",
+      "training_time_s": 306.7179808616638,
+      "n_parameters": 17410,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "DQN",
+      "environment": "LunarLander-v3",
+      "training_time_s": 385.32533740997314,
+      "n_parameters": 18180,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "DQN",
+      "environment": "MountainCar-v0",
+      "training_time_s": 242.8329164981842,
+      "n_parameters": 17283,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "BipedalWalker-v3",
+      "training_time_s": 45.07982063293457,
+      "n_parameters": 6089,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "CartPole-v1",
+      "training_time_s": 25.051128387451172,
+      "n_parameters": 4675,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "LunarLander-v3",
+      "training_time_s": 44.44811415672302,
+      "n_parameters": 5061,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "MountainCar-v0",
+      "training_time_s": 29.077467441558838,
+      "n_parameters": 4612,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "PPO",
+      "environment": "Pendulum-v1",
+      "training_time_s": 35.090473651885986,
+      "n_parameters": 4547,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "CartPole-v1",
+      "training_time_s": 65503.746534347534,
+      "n_parameters": 19310,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "MountainCar-v0",
+      "training_time_s": 54461.29609107971,
+      "n_parameters": 19059,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "BipedalWalker-v3",
+      "training_time_s": 3063.2523760795593,
+      "n_parameters": 8573,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "CartPole-v1",
+      "training_time_s": 2351.149189710617,
+      "n_parameters": 5999,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "LunarLander-v3",
+      "training_time_s": 3181.805462360382,
+      "n_parameters": 6521,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "MountainCar-v0",
+      "training_time_s": 2422.331154346466,
+      "n_parameters": 5748,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "Pendulum-v1",
+      "training_time_s": 2406.292176961899,
+      "n_parameters": 5867,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    }
+  ],
+  "quantum_metrics_table": [
+    {
+      "algorithm": "Q-DQN",
+      "environment": "CartPole-v1",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 12783872,
+      "mean_grad_norm": 4.776128441323219,
+      "final_grad_norm": 32.709476470947266
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "MountainCar-v0",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 12783872,
+      "mean_grad_norm": 1.4782565811825001,
+      "final_grad_norm": 0.847588837146759
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "BipedalWalker-v3",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 598016,
+      "mean_grad_norm": 0.1521386958058167,
+      "final_grad_norm": 0.009968048864266166
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "CartPole-v1",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 393216,
+      "mean_grad_norm": 0.0006089226669358702,
+      "final_grad_norm": 0.0009385822825294099
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "LunarLander-v3",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 598016,
+      "mean_grad_norm": 0.0006455780315100851,
+      "final_grad_norm": 0.000287312823445518
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "MountainCar-v0",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 393216,
+      "mean_grad_norm": 8.934043871402138e-05,
+      "final_grad_norm": 2.2707245090458628e-05
+    },
+    {
+      "algorithm": "Q-PPO",
+      "environment": "Pendulum-v1",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 393216,
+      "mean_grad_norm": 0.025497312692702206,
+      "final_grad_norm": 0.014831552138275583
+    }
+  ],
+  "ppo_vs_qppo": {
+    "BipedalWalker-v3": {
+      "ppo_return": -165.41213989257812,
+      "qppo_return": -143.27955627441406,
+      "difference": 22.132583618164062,
+      "relative_difference": 0.13380265578572023,
+      "ppo_wins": false,
+      "qppo_wins": true
+    },
+    "Pendulum-v1": {
+      "ppo_return": -1409.9220157992288,
+      "qppo_return": -1353.8126874435734,
+      "difference": 56.10932835565541,
+      "relative_difference": 0.03979605093509466,
+      "ppo_wins": false,
+      "qppo_wins": true
+    },
+    "MountainCar-v0": {
+      "ppo_return": -200.0,
+      "qppo_return": -200.0,
+      "difference": 0.0,
+      "relative_difference": 0.0,
+      "ppo_wins": false,
+      "qppo_wins": false
+    },
+    "CartPole-v1": {
+      "ppo_return": 108.4,
+      "qppo_return": 192.5,
+      "difference": 84.1,
+      "relative_difference": 0.7758302582310119,
+      "ppo_wins": false,
+      "qppo_wins": true
+    },
+    "LunarLander-v3": {
+      "ppo_return": -568.4522571103792,
+      "qppo_return": -375.8292557257397,
+      "difference": 192.62300138463945,
+      "relative_difference": 0.3388551966710695,
+      "ppo_wins": false,
+      "qppo_wins": true
+    }
+  },
+  "dqn_vs_qdqn": {
+    "MountainCar-v0": {
+      "dqn_return": -141.3,
+      "qdqn_return": -200.0,
+      "difference": -58.69999999999999,
+      "relative_difference": -0.4154281669911231,
+      "dqn_wins": true,
+      "qdqn_wins": false
+    },
+    "CartPole-v1": {
+      "dqn_return": 154.6,
+      "qdqn_return": 98.7,
+      "difference": -55.89999999999999,
+      "relative_difference": -0.3615782664707905,
+      "dqn_wins": true,
+      "qdqn_wins": false
+    }
+  },
+  "sac_vs_qsac": {},
+  "complexity_analysis": {
+    "DQN": [
+      {
+        "complexity": 1,
+        "environment": "CartPole-v1",
+        "mean_return": 154.6,
+        "training_time": 306.7179808616638
+      },
+      {
+        "complexity": 2,
+        "environment": "MountainCar-v0",
+        "mean_return": -141.3,
+        "training_time": 242.8329164981842
+      },
+      {
+        "complexity": 3,
+        "environment": "LunarLander-v3",
+        "mean_return": 122.53496527581271,
+        "training_time": 385.32533740997314
+      }
+    ],
+    "PPO": [
+      {
+        "complexity": 1,
+        "environment": "CartPole-v1",
+        "mean_return": 108.4,
+        "training_time": 25.051128387451172
+      },
+      {
+        "complexity": 2,
+        "environment": "MountainCar-v0",
+        "mean_return": -200.0,
+        "training_time": 29.077467441558838
+      },
+      {
+        "complexity": 3,
+        "environment": "LunarLander-v3",
+        "mean_return": -568.4522571103792,
+        "training_time": 44.44811415672302
+      },
+      {
+        "complexity": 4,
+        "environment": "Pendulum-v1",
+        "mean_return": -1409.9220157992288,
+        "training_time": 35.090473651885986
+      },
+      {
+        "complexity": 5,
+        "environment": "BipedalWalker-v3",
+        "mean_return": -165.41213989257812,
+        "training_time": 45.07982063293457
+      }
+    ],
+    "Q-DQN": [
+      {
+        "complexity": 1,
+        "environment": "CartPole-v1",
+        "mean_return": 98.7,
+        "training_time": 65503.746534347534
+      },
+      {
+        "complexity": 2,
+        "environment": "MountainCar-v0",
+        "mean_return": -200.0,
+        "training_time": 54461.29609107971
+      }
+    ],
+    "Q-PPO": [
+      {
+        "complexity": 1,
+        "environment": "CartPole-v1",
+        "mean_return": 192.5,
+        "training_time": 2351.149189710617
+      },
+      {
+        "complexity": 2,
+        "environment": "MountainCar-v0",
+        "mean_return": -200.0,
+        "training_time": 2422.331154346466
+      },
+      {
+        "complexity": 3,
+        "environment": "LunarLander-v3",
+        "mean_return": -375.8292557257397,
+        "training_time": 3181.805462360382
+      },
+      {
+        "complexity": 4,
+        "environment": "Pendulum-v1",
+        "mean_return": -1353.8126874435734,
+        "training_time": 2406.292176961899
+      },
+      {
+        "complexity": 5,
+        "environment": "BipedalWalker-v3",
+        "mean_return": -143.27955627441406,
+        "training_time": 3063.2523760795593
+      }
+    ]
+  },
+  "final_summary": {
+    "best_per_environment": {
+      "CartPole-v1": {
+        "algorithm": "Q-PPO",
+        "mean_return": 192.5
+      },
+      "LunarLander-v3": {
+        "algorithm": "DQN",
+        "mean_return": 122.53496527581271
+      },
+      "MountainCar-v0": {
+        "algorithm": "DQN",
+        "mean_return": -141.3
+      },
+      "BipedalWalker-v3": {
+        "algorithm": "Q-PPO",
+        "mean_return": -143.27955627441406
+      },
+      "Pendulum-v1": {
+        "algorithm": "Q-PPO",
+        "mean_return": -1353.8126874435734
+      }
+    },
+    "classical_vs_quantum": {
+      "classical_mean": -262.4439309407967,
+      "quantum_mean": -283.1030713491039
+    },
+    "ppo_vs_qppo_summary": {},
+    "dqn_vs_qdqn_summary": {},
+    "sac_vs_qsac_summary": {},
+    "most_sample_efficient": {},
+    "limitations": [
+      "Single random seed (no multi-run statistical variance estimates)",
+      "Classical simulation of quantum circuits (no real quantum hardware)",
+      "Fixed 4-qubit configuration",
+      "Lightning-Qubit simulator overhead",
+      "Five benchmark environments",
+      "Fixed quantum circuit architecture",
+      "Limited hyperparameter search",
+      "No real quantum hardware execution"
+    ]
+  }
+}
