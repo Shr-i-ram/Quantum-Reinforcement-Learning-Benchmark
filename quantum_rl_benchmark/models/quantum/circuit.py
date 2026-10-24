@@ -44,17 +44,21 @@ def _get_device(n_qubits: int = 4, shots: Optional[int] = None):
 
 def _build_circuit(inputs, params, n_qubits, depth):
     """
-    Build the quantum circuit.
+    Build the quantum circuit. Supports single (4,) and batched (B, 4) inputs.
 
     Args:
-        inputs: 4-dimensional feature vector for angle encoding
+        inputs: 4-dimensional feature vector or (batch, 4) tensor for angle encoding
         params: variational parameters shape (depth, n_qubits, 2) for RY, RZ
         n_qubits: number of qubits (fixed at 4)
         depth: number of variational layers
     """
     # Angle encoding: encode each feature as RY rotation on corresponding qubit
-    for i in range(n_qubits):
-        qml.RY(inputs[i], wires=i)
+    if inputs.ndim == 1:
+        for i in range(n_qubits):
+            qml.RY(inputs[i], wires=i)
+    else:
+        for i in range(n_qubits):
+            qml.RY(inputs[:, i], wires=i)
 
     # Variational layers
     for d in range(depth):
@@ -84,7 +88,7 @@ class QuantumCircuitLayer(nn.Module):
         depth: Number of variational layers
         init_scale: Scale for parameter initialization
         shots: Number of shots (None for analytic)
-        differentiation_method: 'backprop' or 'parameter-shift'
+        differentiation_method: 'adjoint' (recommended for lightning.qubit)
     """
 
     def __init__(
@@ -93,7 +97,7 @@ class QuantumCircuitLayer(nn.Module):
         depth: int = 2,
         init_scale: float = 0.1,
         shots: Optional[int] = None,
-        differentiation_method: str = "backprop",
+        differentiation_method: str = "adjoint",
     ):
         super().__init__()
         assert n_qubits == 4, f"Exactly 4 qubits required, got {n_qubits}"
@@ -124,24 +128,31 @@ class QuantumCircuitLayer(nn.Module):
         Forward pass through the quantum circuit.
 
         Args:
-            x: Input tensor of shape (batch_size, n_qubits=4)
+            x: Input tensor of shape (batch_size, n_qubits=4) or (n_qubits=4,)
 
         Returns:
             Tensor of shape (batch_size, n_qubits) with expectation values
         """
-        batch_size = x.shape[0]
-        outputs = []
-
         t0 = time.time()
-        for i in range(batch_size):
-            circuit_input = x[i]
-            out = self.quantum_circuit(circuit_input, self.params)
-            outputs.append(torch.stack(out))
+        is_1d = (x.ndim == 1)
+
+        if is_1d:
+            batch_size = 1
+            out = self.quantum_circuit(x, self.params)
+            result = torch.stack(out)
+        else:
+            batch_size = x.shape[0]
+            if batch_size == 1:
+                out = self.quantum_circuit(x.squeeze(0), self.params)
+                result = torch.stack(out).unsqueeze(0)
+            else:
+                out = self.quantum_circuit(x, self.params)
+                result = torch.stack(out, dim=-1)
 
         _circuit_eval_counter["count"] += batch_size
         _circuit_eval_counter["time"] += (time.time() - t0)
 
-        return torch.stack(outputs)
+        return result
 
     def get_circuit_info(self) -> Dict[str, Any]:
         """Get information about the quantum circuit."""

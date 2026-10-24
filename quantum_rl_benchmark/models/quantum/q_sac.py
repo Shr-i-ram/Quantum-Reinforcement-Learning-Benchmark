@@ -97,9 +97,10 @@ class QuantumActor(nn.Module):
         std = log_std.exp()
         normal = torch.distributions.Normal(mean, std)
         x_t = normal.rsample()
-        action = torch.tanh(x_t) * self.action_bound
+        tanh_x = torch.tanh(x_t)
+        action = tanh_x * self.action_bound
         log_prob = normal.log_prob(x_t)
-        log_prob -= torch.log(self.action_bound * (1 - action.pow(2)) + EPSILON)
+        log_prob -= torch.log(self.action_bound * (1 - tanh_x.pow(2)) + EPSILON)
         log_prob = log_prob.sum(dim=-1, keepdim=True)
         return action, log_prob, mean
 

@@ -11,7 +11,8 @@
       "episodes": 541,
       "training_time_s": 45.07982063293457,
       "n_parameters": 6089,
-      "is_quantum": false
+      "is_quantum": false,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "Q-PPO",
@@ -24,7 +25,36 @@
       "episodes": 223,
       "training_time_s": 3063.2523760795593,
       "n_parameters": 8573,
-      "is_quantum": true
+      "is_quantum": true,
+      "configuration_regime": "original"
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "BipedalWalker-v3",
+      "mean_return": -119.89584616450593,
+      "std_return": 0.16426153564985072,
+      "best_return": -119.65546929091215,
+      "median_return": -119.88407372124493,
+      "total_steps": 25000,
+      "episodes": 151,
+      "training_time_s": 1138.2317588329315,
+      "n_parameters": 62606,
+      "is_quantum": true,
+      "configuration_regime": "optimized"
+    },
+    {
+      "algorithm": "SAC",
+      "environment": "BipedalWalker-v3",
+      "mean_return": -103.75461440542713,
+      "std_return": 0.6845749362257384,
+      "best_return": -101.90318070724607,
+      "median_return": -103.5371338520199,
+      "total_steps": 40000,
+      "episodes": 89,
+      "training_time_s": 167.86913800239563,
+      "n_parameters": 61450,
+      "is_quantum": false,
+      "configuration_regime": "optimized"
     },
     {
       "algorithm": "DQN",
@@ -37,7 +67,8 @@
       "episodes": 812,
       "training_time_s": 306.7179808616638,
       "n_parameters": 17410,
-      "is_quantum": false
+      "is_quantum": false,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "PPO",
@@ -50,7 +81,8 @@
       "episodes": 4202,
       "training_time_s": 25.051128387451172,
       "n_parameters": 4675,
-      "is_quantum": false
+      "is_quantum": false,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "Q-DQN",
@@ -63,7 +95,8 @@
       "episodes": 705,
       "training_time_s": 65503.746534347534,
       "n_parameters": 19310,
-      "is_quantum": true
+      "is_quantum": true,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "Q-PPO",
@@ -76,7 +109,8 @@
       "episodes": 4228,
       "training_time_s": 2351.149189710617,
       "n_parameters": 5999,
-      "is_quantum": true
+      "is_quantum": true,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "DQN",
@@ -89,7 +123,8 @@
       "episodes": 300,
       "training_time_s": 385.32533740997314,
       "n_parameters": 18180,
-      "is_quantum": false
+      "is_quantum": false,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "PPO",
@@ -102,7 +137,22 @@
       "episodes": 1592,
       "training_time_s": 44.44811415672302,
       "n_parameters": 5061,
-      "is_quantum": false
+      "is_quantum": false,
+      "configuration_regime": "original"
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "LunarLander-v3",
+      "mean_return": -354.89396494549226,
+      "std_return": 190.9555840341935,
+      "best_return": -139.60945478404685,
+      "median_return": -302.65865346749524,
+      "total_steps": 100000,
+      "episodes": 812,
+      "training_time_s": 53675.21168613434,
+      "n_parameters": 19832,
+      "is_quantum": true,
+      "configuration_regime": "optimized"
     },
     {
       "algorithm": "Q-PPO",
@@ -115,7 +165,8 @@
       "episodes": 1621,
       "training_time_s": 3181.805462360382,
       "n_parameters": 6521,
-      "is_quantum": true
+      "is_quantum": true,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "DQN",
@@ -128,7 +179,8 @@
       "episodes": 554,
       "training_time_s": 242.8329164981842,
       "n_parameters": 17283,
-      "is_quantum": false
+      "is_quantum": false,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "PPO",
@@ -141,7 +193,8 @@
       "episodes": 500,
       "training_time_s": 29.077467441558838,
       "n_parameters": 4612,
-      "is_quantum": false
+      "is_quantum": false,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "Q-DQN",
@@ -154,7 +207,8 @@
       "episodes": 500,
       "training_time_s": 54461.29609107971,
       "n_parameters": 19059,
-      "is_quantum": true
+      "is_quantum": true,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "Q-PPO",
@@ -167,7 +221,8 @@
       "episodes": 500,
       "training_time_s": 2422.331154346466,
       "n_parameters": 5748,
-      "is_quantum": true
+      "is_quantum": true,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "PPO",
@@ -180,7 +235,8 @@
       "episodes": 500,
       "training_time_s": 35.090473651885986,
       "n_parameters": 4547,
-      "is_quantum": false
+      "is_quantum": false,
+      "configuration_regime": "original"
     },
     {
       "algorithm": "Q-PPO",
@@ -193,20 +249,39 @@
       "episodes": 500,
       "training_time_s": 2406.292176961899,
       "n_parameters": 5867,
-      "is_quantum": true
+      "is_quantum": true,
+      "configuration_regime": "original"
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "Pendulum-v1",
+      "mean_return": -1330.0756969372037,
+      "std_return": 70.62788015790859,
+      "best_return": -1097.3055417119538,
+      "median_return": -1356.0352341884484,
+      "total_steps": 20000,
+      "episodes": 100,
+      "training_time_s": 994.9836900234222,
+      "n_parameters": 53744,
+      "is_quantum": true,
+      "configuration_regime": "optimized"
+    },
+    {
+      "algorithm": "SAC",
+      "environment": "Pendulum-v1",
+      "mean_return": -719.8421188054688,
+      "std_return": 75.59787259123523,
+      "best_return": -628.6038627694111,
+      "median_return": -732.937958920415,
+      "total_steps": 30000,
+      "episodes": 150,
+      "training_time_s": 124.17585444450378,
+      "n_parameters": 51844,
+      "is_quantum": false,
+      "configuration_regime": "optimized"
     }
   ],
   "performance_comparison": {
-    "BipedalWalker-v3": {
-      "PPO": {
-        "mean_return": -165.41213989257812,
-        "is_quantum": false
-      },
-      "Q-PPO": {
-        "mean_return": -143.27955627441406,
-        "is_quantum": true
-      }
-    },
     "Pendulum-v1": {
       "PPO": {
         "mean_return": -1409.9220157992288,
@@ -215,23 +290,49 @@
       "Q-PPO": {
         "mean_return": -1353.8126874435734,
         "is_quantum": true
+      },
+      "Q-SAC": {
+        "mean_return": -1330.0756969372037,
+        "is_quantum": true
+      },
+      "SAC": {
+        "mean_return": -719.8421188054688,
+        "is_quantum": false
       }
     },
-    "MountainCar-v0": {
+    "BipedalWalker-v3": {
+      "PPO": {
+        "mean_return": -165.41213989257812,
+        "is_quantum": false
+      },
+      "Q-PPO": {
+        "mean_return": -143.27955627441406,
+        "is_quantum": true
+      },
+      "Q-SAC": {
+        "mean_return": -119.89584616450593,
+        "is_quantum": true
+      },
+      "SAC": {
+        "mean_return": -103.75461440542713,
+        "is_quantum": false
+      }
+    },
+    "LunarLander-v3": {
       "DQN": {
-        "mean_return": -141.3,
+        "mean_return": 122.53496527581271,
         "is_quantum": false
       },
       "PPO": {
-        "mean_return": -200.0,
+        "mean_return": -568.4522571103792,
         "is_quantum": false
       },
       "Q-DQN": {
-        "mean_return": -200.0,
+        "mean_return": -354.89396494549226,
         "is_quantum": true
       },
       "Q-PPO": {
-        "mean_return": -200.0,
+        "mean_return": -375.8292557257397,
         "is_quantum": true
       }
     },
@@ -253,17 +354,21 @@
         "is_quantum": true
       }
     },
-    "LunarLander-v3": {
+    "MountainCar-v0": {
       "DQN": {
-        "mean_return": 122.53496527581271,
+        "mean_return": -141.3,
         "is_quantum": false
       },
       "PPO": {
-        "mean_return": -568.4522571103792,
+        "mean_return": -200.0,
         "is_quantum": false
       },
+      "Q-DQN": {
+        "mean_return": -200.0,
+        "is_quantum": true
+      },
       "Q-PPO": {
-        "mean_return": -375.8292557257397,
+        "mean_return": -200.0,
         "is_quantum": true
       }
     }
@@ -334,6 +439,13 @@
     },
     {
       "algorithm": "Q-DQN",
+      "environment": "LunarLander-v3",
+      "aulc": 0.8112285198104536,
+      "episodes": 812,
+      "total_steps": 100000
+    },
+    {
+      "algorithm": "Q-DQN",
       "environment": "MountainCar-v0",
       "aulc": 0.004158004158004167,
       "episodes": 500,
@@ -373,6 +485,34 @@
       "aulc": 0.42893534276248074,
       "episodes": 500,
       "total_steps": 100000
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "BipedalWalker-v3",
+      "aulc": 0.5376131497969199,
+      "episodes": 151,
+      "total_steps": 25000
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "Pendulum-v1",
+      "aulc": 0.5183129738847178,
+      "episodes": 100,
+      "total_steps": 20000
+    },
+    {
+      "algorithm": "SAC",
+      "environment": "BipedalWalker-v3",
+      "aulc": 0.6406338894692691,
+      "episodes": 89,
+      "total_steps": 40000
+    },
+    {
+      "algorithm": "SAC",
+      "environment": "Pendulum-v1",
+      "aulc": 0.6504649025786278,
+      "episodes": 150,
+      "total_steps": 30000
     }
   ],
   "stability_table": [
@@ -441,6 +581,13 @@
     },
     {
       "algorithm": "Q-DQN",
+      "environment": "LunarLander-v3",
+      "reward_std": 168.0750371025861,
+      "reward_fluctuation": 0.8090556345933173,
+      "max_drawdown": 4.528005906374349
+    },
+    {
+      "algorithm": "Q-DQN",
       "environment": "MountainCar-v0",
       "reward_std": 5.7280768151273955,
       "reward_fluctuation": 0.028704107192168385,
@@ -480,6 +627,34 @@
       "reward_std": 187.4653095800953,
       "reward_fluctuation": 0.13832502511392408,
       "max_drawdown": 0.19126313168130948
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "BipedalWalker-v3",
+      "reward_std": 11.435146380603111,
+      "reward_fluctuation": 0.1025840838513048,
+      "max_drawdown": 0.13310592805888485
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "Pendulum-v1",
+      "reward_std": 246.3488632519597,
+      "reward_fluctuation": 0.21272609242718146,
+      "max_drawdown": 0.15225594336547243
+    },
+    {
+      "algorithm": "SAC",
+      "environment": "BipedalWalker-v3",
+      "reward_std": 25.937706217091712,
+      "reward_fluctuation": 0.23129116724176635,
+      "max_drawdown": 0.44612365518762115
+    },
+    {
+      "algorithm": "SAC",
+      "environment": "Pendulum-v1",
+      "reward_std": 307.9328806280136,
+      "reward_fluctuation": 0.30095446547941035,
+      "max_drawdown": 0.11087564385707976
     }
   ],
   "computational_cost_table": [
@@ -557,6 +732,14 @@
     },
     {
       "algorithm": "Q-DQN",
+      "environment": "LunarLander-v3",
+      "training_time_s": 53675.21168613434,
+      "n_parameters": 19832,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-DQN",
       "environment": "MountainCar-v0",
       "training_time_s": 54461.29609107971,
       "n_parameters": 19059,
@@ -602,6 +785,38 @@
       "n_parameters": 5867,
       "is_quantum": true,
       "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "BipedalWalker-v3",
+      "training_time_s": 1138.2317588329315,
+      "n_parameters": 62606,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "Pendulum-v1",
+      "training_time_s": 994.9836900234222,
+      "n_parameters": 53744,
+      "is_quantum": true,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "SAC",
+      "environment": "BipedalWalker-v3",
+      "training_time_s": 167.86913800239563,
+      "n_parameters": 61450,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
+    },
+    {
+      "algorithm": "SAC",
+      "environment": "Pendulum-v1",
+      "training_time_s": 124.17585444450378,
+      "n_parameters": 51844,
+      "is_quantum": false,
+      "quantum_time_s": 0.0
     }
   ],
   "quantum_metrics_table": [
@@ -615,6 +830,17 @@
       "quantum_evaluations": 12783872,
       "mean_grad_norm": 4.776128441323219,
       "final_grad_norm": 32.709476470947266
+    },
+    {
+      "algorithm": "Q-DQN",
+      "environment": "LunarLander-v3",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 11686784,
+      "mean_grad_norm": 50.43796633732675,
+      "final_grad_norm": 134.0709228515625
     },
     {
       "algorithm": "Q-DQN",
@@ -681,17 +907,31 @@
       "quantum_evaluations": 393216,
       "mean_grad_norm": 0.025497312692702206,
       "final_grad_norm": 0.014831552138275583
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "BipedalWalker-v3",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 196032,
+      "mean_grad_norm": 0.21953382870924898,
+      "final_grad_norm": 0.2599989175796509
+    },
+    {
+      "algorithm": "Q-SAC",
+      "environment": "Pendulum-v1",
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "n_params": 16,
+      "total_gates": 28,
+      "quantum_evaluations": 156032,
+      "mean_grad_norm": 0.3015554091862385,
+      "final_grad_norm": 0.6202144026756287
     }
   ],
   "ppo_vs_qppo": {
-    "BipedalWalker-v3": {
-      "ppo_return": -165.41213989257812,
-      "qppo_return": -143.27955627441406,
-      "difference": 22.132583618164062,
-      "relative_difference": 0.13380265578572023,
-      "ppo_wins": false,
-      "qppo_wins": true
-    },
     "Pendulum-v1": {
       "ppo_return": -1409.9220157992288,
       "qppo_return": -1353.8126874435734,
@@ -700,19 +940,11 @@
       "ppo_wins": false,
       "qppo_wins": true
     },
-    "MountainCar-v0": {
-      "ppo_return": -200.0,
-      "qppo_return": -200.0,
-      "difference": 0.0,
-      "relative_difference": 0.0,
-      "ppo_wins": false,
-      "qppo_wins": false
-    },
-    "CartPole-v1": {
-      "ppo_return": 108.4,
-      "qppo_return": 192.5,
-      "difference": 84.1,
-      "relative_difference": 0.7758302582310119,
+    "BipedalWalker-v3": {
+      "ppo_return": -165.41213989257812,
+      "qppo_return": -143.27955627441406,
+      "difference": 22.132583618164062,
+      "relative_difference": 0.13380265578572023,
       "ppo_wins": false,
       "qppo_wins": true
     },
@@ -723,14 +955,30 @@
       "relative_difference": 0.3388551966710695,
       "ppo_wins": false,
       "qppo_wins": true
+    },
+    "CartPole-v1": {
+      "ppo_return": 108.4,
+      "qppo_return": 192.5,
+      "difference": 84.1,
+      "relative_difference": 0.7758302582310119,
+      "ppo_wins": false,
+      "qppo_wins": true
+    },
+    "MountainCar-v0": {
+      "ppo_return": -200.0,
+      "qppo_return": -200.0,
+      "difference": 0.0,
+      "relative_difference": 0.0,
+      "ppo_wins": false,
+      "qppo_wins": false
     }
   },
   "dqn_vs_qdqn": {
-    "MountainCar-v0": {
-      "dqn_return": -141.3,
-      "qdqn_return": -200.0,
-      "difference": -58.69999999999999,
-      "relative_difference": -0.4154281669911231,
+    "LunarLander-v3": {
+      "dqn_return": 122.53496527581271,
+      "qdqn_return": -354.89396494549226,
+      "difference": -477.428930221305,
+      "relative_difference": -3.896266907226867,
       "dqn_wins": true,
       "qdqn_wins": false
     },
@@ -741,9 +989,34 @@
       "relative_difference": -0.3615782664707905,
       "dqn_wins": true,
       "qdqn_wins": false
+    },
+    "MountainCar-v0": {
+      "dqn_return": -141.3,
+      "qdqn_return": -200.0,
+      "difference": -58.69999999999999,
+      "relative_difference": -0.4154281669911231,
+      "dqn_wins": true,
+      "qdqn_wins": false
     }
   },
-  "sac_vs_qsac": {},
+  "sac_vs_qsac": {
+    "Pendulum-v1": {
+      "sac_return": -719.8421188054688,
+      "qsac_return": -1330.0756969372037,
+      "difference": -610.2335781317349,
+      "relative_difference": -0.8477325265933321,
+      "sac_wins": true,
+      "qsac_wins": false
+    },
+    "BipedalWalker-v3": {
+      "sac_return": -103.75461440542713,
+      "qsac_return": -119.89584616450593,
+      "difference": -16.141231759078792,
+      "relative_difference": -0.15557121820577818,
+      "sac_wins": true,
+      "qsac_wins": false
+    }
+  },
   "complexity_analysis": {
     "DQN": [
       {
@@ -809,6 +1082,12 @@
         "environment": "MountainCar-v0",
         "mean_return": -200.0,
         "training_time": 54461.29609107971
+      },
+      {
+        "complexity": 3,
+        "environment": "LunarLander-v3",
+        "mean_return": -354.89396494549226,
+        "training_time": 53675.21168613434
       }
     ],
     "Q-PPO": [
@@ -842,6 +1121,34 @@
         "mean_return": -143.27955627441406,
         "training_time": 3063.2523760795593
       }
+    ],
+    "Q-SAC": [
+      {
+        "complexity": 4,
+        "environment": "Pendulum-v1",
+        "mean_return": -1330.0756969372037,
+        "training_time": 994.9836900234222
+      },
+      {
+        "complexity": 5,
+        "environment": "BipedalWalker-v3",
+        "mean_return": -119.89584616450593,
+        "training_time": 1138.2317588329315
+      }
+    ],
+    "SAC": [
+      {
+        "complexity": 4,
+        "environment": "Pendulum-v1",
+        "mean_return": -719.8421188054688,
+        "training_time": 124.17585444450378
+      },
+      {
+        "complexity": 5,
+        "environment": "BipedalWalker-v3",
+        "mean_return": -103.75461440542713,
+        "training_time": 167.86913800239563
+      }
     ]
   },
   "final_summary": {
@@ -859,17 +1166,17 @@
         "mean_return": -141.3
       },
       "BipedalWalker-v3": {
-        "algorithm": "Q-PPO",
-        "mean_return": -143.27955627441406
+        "algorithm": "SAC",
+        "mean_return": -103.75461440542713
       },
       "Pendulum-v1": {
-        "algorithm": "Q-PPO",
-        "mean_return": -1353.8126874435734
+        "algorithm": "SAC",
+        "mean_return": -719.8421188054688
       }
     },
     "classical_vs_quantum": {
-      "classical_mean": -262.4439309407967,
-      "quantum_mean": -283.1030713491039
+      "classical_mean": -292.31481807372694,
+      "quantum_mean": -378.65870074909293
     },
     "ppo_vs_qppo_summary": {},
     "dqn_vs_qdqn_summary": {},

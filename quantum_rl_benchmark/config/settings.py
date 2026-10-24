@@ -125,6 +125,9 @@ class ExperimentConfig:
     # Environment configs - per environment overrides
     env_configs: dict = field(default_factory=dict)
 
+    # Specific experiment budgets for fine-grained budget control
+    experiment_budgets: dict = field(default_factory=dict)
+
     # Performance thresholds for sample efficiency
     # (env_name -> threshold for "solved")
     performance_thresholds: dict = field(default_factory=lambda: {
@@ -134,6 +137,15 @@ class ExperimentConfig:
         "Pendulum-v1": -200.0,
         "BipedalWalker-v3": 300.0,
     })
+
+    def get_experiment_budget(self, algorithm: str, env_name: str) -> int:
+        """Get the step budget for a specific algorithm and environment."""
+        key = f"{algorithm}_{env_name}"
+        if self.experiment_budgets and key in self.experiment_budgets:
+            return self.experiment_budgets[key]
+        if env_name in self.env_configs and "total_timesteps" in self.env_configs[env_name]:
+            return self.env_configs[env_name]["total_timesteps"]
+        return self.training.total_timesteps
 
     def __post_init__(self):
         """Set up directory paths based on base_dir."""
@@ -288,22 +300,42 @@ def get_experiment_key(algorithm: str, env_name: str) -> str:
 
 
 def get_default_config() -> ExperimentConfig:
-    """Get the default experiment configuration."""
+    """Get the default experiment configuration with optimized settings for remaining runs."""
     config = ExperimentConfig()
-    # Reduce BipedalWalker budget for practicality
-    config.env_configs["BipedalWalker-v3"] = {
-        "total_timesteps": 150_000,
-    }
-    config.env_configs["CartPole-v1"] = {
-        "total_timesteps": 100_000,
-    }
-    config.env_configs["MountainCar-v0"] = {
-        "total_timesteps": 100_000,
-    }
-    config.env_configs["Pendulum-v1"] = {
-        "total_timesteps": 100_000,
-    }
-    config.env_configs["LunarLander-v3"] = {
-        "total_timesteps": 150_000,
+
+    # Optimized settings for Q-DQN (practical runtime and faster updates)
+    config.q_dqn.batch_size = 32
+    config.q_dqn.train_freq = 4
+    config.q_dqn.hidden_dim = 128  # Preserves checkpoint compatibility
+    config.q_dqn.target_update_freq = 500
+
+    # Optimized settings for SAC (compact classical MLP actor and twin critics)
+    config.sac.batch_size = 64
+    config.sac.train_freq = 2
+    config.sac.hidden_dim = 128
+    config.sac.warmup_steps = 500
+    config.sac.replay_buffer_size = 100_000
+
+    # Optimized settings for Q-SAC (4-qubit quantum actor, compact classical twin critics)
+    config.q_sac.batch_size = 32
+    config.q_sac.train_freq = 4
+    config.q_sac.hidden_dim = 128
+    config.q_sac.warmup_steps = 500
+    config.q_sac.replay_buffer_size = 100_000
+
+    # Base environment budgets
+    config.env_configs["CartPole-v1"] = {"total_timesteps": 100_000}
+    config.env_configs["MountainCar-v0"] = {"total_timesteps": 100_000}
+    config.env_configs["LunarLander-v3"] = {"total_timesteps": 150_000}
+    config.env_configs["Pendulum-v1"] = {"total_timesteps": 100_000}
+    config.env_configs["BipedalWalker-v3"] = {"total_timesteps": 150_000}
+
+    # Explicit experiment budgets for remaining unfinished runs
+    config.experiment_budgets = {
+        "Q-DQN_LunarLander-v3": 100_000,   # Resumes from step 90,281 to 100,000
+        "SAC_Pendulum-v1": 30_000,         # Sufficient for Pendulum convergence with SAC
+        "Q-SAC_Pendulum-v1": 20_000,       # Compact hybrid SAC on Pendulum
+        "SAC_BipedalWalker-v3": 40_000,     # Practical budget for continuous control
+        "Q-SAC_BipedalWalker-v3": 25_000,   # Compact hybrid SAC on BipedalWalker
     }
     return config

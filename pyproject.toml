@@ -46,6 +46,7 @@ dependencies = [
     "matplotlib>=3.7.0",
     "scipy>=1.10.0",
     "scikit-learn>=1.3.0",
+    "Pillow>=9.5.0",
 ]
 
 [project.optional-dependencies]
@@ -58,6 +59,7 @@ dev = [
 
 [project.scripts]
 quantum-rl-benchmark = "run_experiment:main"
+visualize-agent = "visualize_agent:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

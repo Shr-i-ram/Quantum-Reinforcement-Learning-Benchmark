@@ -81,6 +81,7 @@ class MetricsComputer:
                 "training_time_s": result.get("training_time", 0),
                 "n_parameters": agent_info.get("n_parameters", 0),
                 "is_quantum": agent_info.get("is_quantum", False),
+                "configuration_regime": result.get("configuration_regime", result.get("config", {}).get("configuration_regime", "original")),
             })
         return sorted(rows, key=lambda x: (x["environment"], x["algorithm"]))
 

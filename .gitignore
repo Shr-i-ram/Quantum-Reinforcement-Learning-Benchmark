@@ -45,15 +45,19 @@ dist/
 eggs/
 *.egg
 
-# Testing and Coverage
+# Testing, Linting and Coverage
 .pytest_cache/
 .coverage
 .coverage.*
 htmlcov/
 .tox/
+.mypy_cache/
+.ruff_cache/
 
 # Jupyter / IPython
 .ipynb_checkpoints
 
-# Logs
+# Logs and Temporary files
 *.log
+*.tmp
+*.bak

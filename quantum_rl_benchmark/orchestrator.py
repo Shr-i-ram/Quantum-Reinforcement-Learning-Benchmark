@@ -252,6 +252,9 @@ class Orchestrator:
             try:
                 result = trainer.train(algo, env_name, ENVIRONMENTS)
                 all_results[key] = result
+            except KeyboardInterrupt:
+                print(f"\n  [INTERRUPT] Benchmark interrupted by user at {algo} on {env_name}.")
+                raise
             except Exception as e:
                 print(f"    [ERROR] {algo} on {env_name} failed: {e}")
                 import traceback

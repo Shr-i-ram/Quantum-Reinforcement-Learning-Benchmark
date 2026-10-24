@@ -194,10 +194,8 @@ class Trainer:
         Returns a results dictionary.
         """
         key = get_experiment_key(algorithm, env_name)
-        env_cfg = self.get_env_config(env_name)
-        total_timesteps = env_cfg.get("total_timesteps", self.config.training.total_timesteps)
-        eval_freq = self.config.training.eval_freq
-        eval_episodes = self.config.training.eval_episodes
+        total_timesteps = self.config.get_experiment_budget(algorithm, env_name)
+        eval_episodes = self.config.evaluation.n_episodes
         checkpoint_freq = self.config.training.checkpoint_freq
         log_interval = self.config.training.log_interval
 
@@ -208,17 +206,27 @@ class Trainer:
         checkpoint_path = self.find_latest_checkpoint(algorithm, env_name)
         resume = False
         if checkpoint_path:
-            print(f"  [RESUME] Found checkpoint: {checkpoint_path}")
-            agent = self._load_agent(algorithm, checkpoint_path)
-            resume = True
-            start_step = agent.total_steps
-            status = "resumed"
-            print(f"  [RESUME] Resuming from step {start_step}")
+            try:
+                ckpt_data = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
+                ckpt_steps = ckpt_data.get("total_steps", 0)
+                if ckpt_steps > 0:
+                    agent = self._load_agent(algorithm, checkpoint_path)
+                    resume = True
+                    start_step = agent.total_steps
+                    print(f"  [RESUME] Found checkpoint: {checkpoint_path}")
+                    print(f"  [RESUME] Resuming from step {start_step}")
+                else:
+                    print(f"  [NEW] Checkpoint has 0 steps. Creating fresh agent for {algorithm} on {env_name}")
+                    agent = self.create_agent(algorithm, env_name, env_specs)
+                    start_step = 0
+            except Exception as e:
+                print(f"  [WARN] Failed to load checkpoint {checkpoint_path} ({e}). Starting fresh.")
+                agent = self.create_agent(algorithm, env_name, env_specs)
+                start_step = 0
         else:
             print(f"  [NEW] Creating new agent for {algorithm} on {env_name}")
             agent = self.create_agent(algorithm, env_name, env_specs)
             start_step = 0
-            status = "started_fresh"
 
         logger.update(
             algorithm=algorithm,
@@ -336,16 +344,9 @@ class Trainer:
             print(f"  [INTERRUPT] Saving checkpoint at step {step}...")
             agent.save_checkpoint(self.get_checkpoint_path(algorithm, env_name))
             agent.training_step = step
-            agent.save_checkpoint(self.get_checkpoint_path(algorithm, env_name))
             logger.finish(status="interrupted")
             env.close()
-            return {
-                "algorithm": algorithm,
-                "environment": env_name,
-                "status": "interrupted",
-                "total_steps": step,
-                "episodes": agent.episode_count,
-            }
+            raise
 
         # Final save
         agent.save_checkpoint(self.get_checkpoint_path(algorithm, env_name))
@@ -375,10 +376,16 @@ class Trainer:
 
         # Compile full results
         agent_info = agent.get_info()
+        is_optimized = key in [
+            "Q-DQN_LunarLander-v3", "SAC_Pendulum-v1", "Q-SAC_Pendulum-v1",
+            "SAC_BipedalWalker-v3", "Q-SAC_BipedalWalker-v3"
+        ]
+        regime = "optimized" if is_optimized else "original"
         results = {
             "algorithm": algorithm,
             "environment": env_name,
             "status": "completed",
+            "configuration_regime": regime,
             "resumed": resume,
             "total_steps": step,
             "episodes": agent.episode_count,
@@ -389,6 +396,10 @@ class Trainer:
             "config": {
                 "seed": self.config.seed,
                 "total_timesteps": total_timesteps,
+                "configuration_regime": regime,
+                "batch_size": getattr(agent.config, "batch_size", None),
+                "train_freq": getattr(agent.config, "train_freq", None),
+                "hidden_dim": getattr(agent.config, "hidden_dim", None),
             },
         }
 
@@ -469,7 +480,7 @@ class Trainer:
         elif algorithm == "SAC":
             return SACAgent.load_checkpoint(checkpoint_path, config=self.config.sac)
         elif algorithm == "Q-SAC":
-            return QSACAgent.load_checkpoint(checkpoint_path, config=self.config.sac,
+            return QSACAgent.load_checkpoint(checkpoint_path, config=self.config.q_sac,
                                               quantum_config=self.config.quantum)
         else:
             raise ValueError(f"Unknown algorithm: {algorithm}")

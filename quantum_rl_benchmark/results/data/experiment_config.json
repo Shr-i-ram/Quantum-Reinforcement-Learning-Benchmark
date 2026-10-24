@@ -49,11 +49,11 @@
     "epsilon_start": 1.0,
     "epsilon_end": 0.05,
     "epsilon_decay_steps": 10000,
-    "batch_size": 64,
+    "batch_size": 32,
     "replay_buffer_size": 100000,
-    "target_update_freq": 1000,
+    "target_update_freq": 500,
     "hidden_dim": 128,
-    "train_freq": 1
+    "train_freq": 4
   },
   "sac": {
     "learning_rate": 0.0003,
@@ -62,11 +62,11 @@
     "alpha": 0.2,
     "auto_alpha": true,
     "target_entropy": null,
-    "batch_size": 256,
-    "replay_buffer_size": 1000000,
-    "hidden_dim": 256,
-    "warmup_steps": 1000,
-    "train_freq": 1
+    "batch_size": 64,
+    "replay_buffer_size": 100000,
+    "hidden_dim": 128,
+    "warmup_steps": 500,
+    "train_freq": 2
   },
   "q_sac": {
     "learning_rate": 0.0003,
@@ -75,11 +75,11 @@
     "alpha": 0.2,
     "auto_alpha": true,
     "target_entropy": null,
-    "batch_size": 256,
-    "replay_buffer_size": 1000000,
-    "hidden_dim": 256,
-    "warmup_steps": 1000,
-    "train_freq": 1
+    "batch_size": 32,
+    "replay_buffer_size": 100000,
+    "hidden_dim": 128,
+    "warmup_steps": 500,
+    "train_freq": 4
   },
   "quantum": {
     "n_qubits": 4,
@@ -106,21 +106,28 @@
     "record_video": false
   },
   "env_configs": {
-    "BipedalWalker-v3": {
-      "total_timesteps": 150000
-    },
     "CartPole-v1": {
       "total_timesteps": 100000
     },
     "MountainCar-v0": {
       "total_timesteps": 100000
     },
+    "LunarLander-v3": {
+      "total_timesteps": 150000
+    },
     "Pendulum-v1": {
       "total_timesteps": 100000
     },
-    "LunarLander-v3": {
+    "BipedalWalker-v3": {
       "total_timesteps": 150000
     }
+  },
+  "experiment_budgets": {
+    "Q-DQN_LunarLander-v3": 100000,
+    "SAC_Pendulum-v1": 30000,
+    "Q-SAC_Pendulum-v1": 20000,
+    "SAC_BipedalWalker-v3": 40000,
+    "Q-SAC_BipedalWalker-v3": 25000
   },
   "performance_thresholds": {
     "CartPole-v1": 475.0,

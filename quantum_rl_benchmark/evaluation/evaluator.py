@@ -212,7 +212,7 @@ class Evaluator:
             # Computational metrics
             agent_info = result.get("agent_info", {})
             compute_metrics = {
-                "total_training_time": agent_info.get("total_training_time", 0),
+                "total_training_time": agent_info.get("total_training_time", result.get("training_time", 0)),
                 "n_parameters": agent_info.get("n_parameters", 0),
                 "quantum_time": agent_info.get("quantum_time", 0),
             }
