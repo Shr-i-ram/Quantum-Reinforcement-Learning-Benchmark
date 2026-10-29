@@ -91,3 +91,4 @@ All metrics below reflect 20 deterministic evaluation episodes per trained agent
 1. **Classical Simulation Backend**: All quantum circuits were simulated classically via PennyLane's `lightning.qubit` statevector simulator without physical quantum hardware noise (decoherence, readout error, crosstalk).
 2. **Four-Qubit Information Bottleneck**: For observation spaces with $d > 4$ (`LunarLander-v3` $d=8$, `BipedalWalker-v3` $d=24$), classical linear projection was required to fit the 4-qubit hard cap.
 3. **Single Training Seed (Seed 42)**: Primary benchmark evaluations used seed 42 with within-run multi-seed evaluation rollouts.
+

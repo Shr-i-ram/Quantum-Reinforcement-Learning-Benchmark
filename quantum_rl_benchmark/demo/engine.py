@@ -355,3 +355,4 @@ def render_annotated_frame(
         draw.text((12, img.height - q_banner_height + 4), q_text, fill=(192, 132, 252))
 
     return img
+

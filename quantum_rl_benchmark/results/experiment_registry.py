@@ -159,3 +159,4 @@ if __name__ == "__main__":
     n_demo = len(reg["demonstration_experiments"])
     n_base = len(reg["baselines"])
     print(f"Registry summary: {n_bench} benchmark runs, {n_demo} demonstration runs, {n_base} baselines recorded.")
+

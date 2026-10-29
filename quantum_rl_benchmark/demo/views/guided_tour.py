@@ -172,3 +172,4 @@ def render_guided_tour():
             </p>
         </div>
         """, unsafe_allow_html=True)
+

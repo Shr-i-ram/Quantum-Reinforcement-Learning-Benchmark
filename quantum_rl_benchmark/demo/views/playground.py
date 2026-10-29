@@ -416,3 +416,4 @@ def render_playground():
                 st.write(f"• **Std Vector** $\\sigma(s)$: `{np.array(dist_data['std']).round(3)}`")
         else:
             st.caption("Step the policy to inspect internal network activations and quantum observables.")
+

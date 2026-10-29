@@ -4,10 +4,25 @@ Top-level Streamlit Application.
 
 Usage:
     streamlit run app.py
+    # Or directly:
+    python app.py
 """
 
 import os
 import sys
+
+# Auto-dispatch to `streamlit run` if invoked directly via `python app.py`
+try:
+    from streamlit.runtime import exists as _st_exists
+    _running_under_streamlit = _st_exists()
+except Exception:
+    _running_under_streamlit = False
+
+if not _running_under_streamlit:
+    import subprocess
+    cmd = [sys.executable, "-m", "streamlit", "run", os.path.abspath(__file__)] + sys.argv[1:]
+    sys.exit(subprocess.call(cmd))
+
 import platform
 import streamlit as st
 import torch
@@ -98,3 +113,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

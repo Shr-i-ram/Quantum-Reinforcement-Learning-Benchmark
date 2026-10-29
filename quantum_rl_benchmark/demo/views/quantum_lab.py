@@ -54,7 +54,7 @@ Features x (4D) ──[ RY(x3) ]──[ RY(θ3,0) ]──[ RZ(θ3,1) ]──│�
         """, language="text")
 
         st.markdown("##### 🧬 Hybrid Data Pipeline Flow")
-        st.markdown("""
+        st.markdown(r"""
         1. **Classical Projection**: Raw observations $\mathbf{s} \in \mathbb{R}^d$ pass through `QuantumFeatureProjection` (with `Tanh` nonlinearity) bounding features to $\mathbf{x} \in [-1, 1]^4$.
         2. **Angle Encoding**: Data re-uploading via single-qubit Pauli-Y rotations: $R_y(x_i) = \exp(-i \frac{x_i}{2} Y)$.
         3. **Variational Entanglement**: Depth $D=2$ single-qubit rotations ($R_y, R_z$) coupled with forward-and-reverse CNOT ladders.
@@ -122,3 +122,4 @@ Features x (4D) ──[ RY(x3) ]──[ RY(θ3,0) ]──[ RZ(θ3,1) ]──│�
             </p>
         </div>
         """, unsafe_allow_html=True)
+

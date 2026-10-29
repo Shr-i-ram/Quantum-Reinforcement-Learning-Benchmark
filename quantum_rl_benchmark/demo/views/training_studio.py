@@ -142,3 +142,4 @@ def render_training_studio():
     # Saved Checkpoint Notification
     if stat.get("saved_checkpoint_path") and not TRAINING_JOB.is_running:
         st.success(f"✅ Training completed! Model saved to `{stat['saved_checkpoint_path']}`")
+

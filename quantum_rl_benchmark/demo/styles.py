@@ -158,3 +158,4 @@ def apply_custom_styles():
     """Apply CSS styles into Streamlit app."""
     import streamlit as st
     st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
+

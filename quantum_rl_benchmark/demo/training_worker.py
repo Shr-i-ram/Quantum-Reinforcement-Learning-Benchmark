@@ -180,3 +180,4 @@ class LiveTrainingJob:
 
 # Global singleton instance for live training
 TRAINING_JOB = LiveTrainingJob()
+

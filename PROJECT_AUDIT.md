@@ -104,3 +104,4 @@ To maintain strict scientific integrity and avoid altering existing benchmark re
    - Develop a comprehensive Streamlit research laboratory with real-time environment rendering, HUD telemetry, live action inspection (including Pauli expectation values), human control mode, side-by-side arena, live training studio, and quantum circuit visualizer.
 4. **Deploy Experiment Registry**:
    - Centralize all benchmark, baseline, and demonstration metadata in `experiment_registry.json`.
+

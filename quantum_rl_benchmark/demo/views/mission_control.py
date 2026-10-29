@@ -132,3 +132,4 @@ def render_mission_control():
         <strong>One-Click Guided Tour</strong> for a curated 15-minute presentation sequence.
     </div>
     """, unsafe_allow_html=True)
+

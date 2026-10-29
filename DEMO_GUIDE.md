@@ -93,3 +93,4 @@ Follow this curated sequence during your final project evaluation:
   Click the **`🔄 Reset Demo State`** button in the sidebar to clear cached sessions.
 - **Run without GUI/Internet**:
   All models, environments, and dependencies run 100% locally on CPU or GPU without external network access.
+

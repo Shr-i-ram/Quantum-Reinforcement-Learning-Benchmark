@@ -185,3 +185,4 @@ if __name__ == "__main__":
     for k, v in res.items():
         m = v["metrics"]
         print(f"  {k:30s} -> Mean Return: {m['mean_return']:8.2f} +/- {m['std_return']:6.2f} (Median: {m['median_return']:8.2f})")
+

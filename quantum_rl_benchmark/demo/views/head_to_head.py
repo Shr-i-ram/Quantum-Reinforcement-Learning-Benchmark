@@ -237,3 +237,4 @@ def render_head_to_head():
                 font=dict(color="#cbd5e1")
             )
             st.plotly_chart(fig, use_container_width=True)
+

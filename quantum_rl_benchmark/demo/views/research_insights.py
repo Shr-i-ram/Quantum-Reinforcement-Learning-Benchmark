@@ -96,3 +96,4 @@ def render_research_insights():
 
         with st.expander("👁️ Preview Report Content", expanded=True):
             st.markdown(report_md)
+
