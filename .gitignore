@@ -39,9 +39,16 @@ desktop.ini
 .freebuff/
 scratch/
 
+# Node / Frontend
+frontend/node_modules/
+node_modules/
+.npm/
+
 # Build and Distribution
 build/
 dist/
+!frontend/dist/
+!frontend/dist/**
 *.egg-info/
 .eggs/
 eggs/

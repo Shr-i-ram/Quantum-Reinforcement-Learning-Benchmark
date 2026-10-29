@@ -1,26 +1,24 @@
-# Demonstration & University Review Guide
+# Demonstration & University Review Guide: Quantum RL Arena
 
 **Project Title**: *Comparison of Quantum Reinforcement Learning Algorithms in Increasingly Complex Gymnasium Environments*  
 **Authors**: Shriram Narayanan, Evelyn Maria Paulraj, and Koppesh P  
+**Platform**: Quantum RL Arena (FastAPI + React TypeScript + PennyLane + PyTorch)
 
 ---
 
-## 🚀 Quick Launch (1-Minute Setup)
+## 🚀 Quick Launch (Single Command)
 
 From the project root:
 
 ```bash
-# 1. Activate the virtual environment
-# On Windows PowerShell:
-.\.venv\Scripts\Activate.ps1
-# On Linux / macOS:
-source .venv/bin/activate
+# Option 1: Python Launcher (auto-detects virtualenv, builds if needed, opens browser)
+python run_arena.py
 
-# 2. Launch the Interactive Web Demonstration Platform
-streamlit run app.py
+# Option 2: Windows Batch Script
+.\start_arena.bat
 ```
 
-The application will immediately open in your default browser at `http://localhost:8501`.
+The application automatically starts the FastAPI backend server on `http://localhost:8000` and launches your default browser to the web platform.
 
 ---
 
@@ -28,69 +26,64 @@ The application will immediately open in your default browser at `http://localho
 
 Follow this curated sequence during your final project evaluation:
 
-### Part 1: Problem Statement & Motivation (2–3 Minutes)
-1. Navigate to **`🚀 Mission Control`**.
-2. Explain the core research question: *Can a compact 4-qubit variational circuit with 16 parameters compete with classical deep neural networks across scaling complexity tiers?*
-3. Highlight the **20/20 completed experiment matrix** spanning 5 environments (`CartPole-v1`, `MountainCar-v0`, `LunarLander-v3`, `Pendulum-v1`, `BipedalWalker-v3`).
-4. Point out the hard maximum cap of **4 qubits**, analytic adjoint differentiation via PennyLane `lightning.qubit`, and the IEEE conference paper ([`IEEE_Quantum_RL_Benchmark_Paper.pdf`](IEEE_Quantum_RL_Benchmark_Paper.pdf)).
+### Part 1: Problem Statement & Mission Control (2 Minutes)
+1. Open the application at `http://localhost:8000`.
+2. Review **Mission Control**:
+   - Research question: *Does replacing classical neural network layers with variational quantum circuits (VQCs) provide an empirical advantage across scaling Gymnasium complexity?*
+   - Highlight the **20/20 completed benchmark experiment matrix** across 5 environments (`CartPole-v1`, `MountainCar-v0`, `LunarLander-v3`, `Pendulum-v1`, `BipedalWalker-v3`).
+   - Mention the authors and point out the IEEE conference paper ([`IEEE_Quantum_RL_Benchmark_Paper.pdf`](file:///C:/Users/Shriram/Desktop/python/RL_Project/IEEE_Quantum_RL_Benchmark_Paper.pdf)).
+3. Click the **Guided Tour** button in the top navigation bar to display the built-in 8-step review sequence.
 
 ### Part 2: Live Incontrovertible Proof of Learning (3 Minutes)
-1. Navigate to **`🎮 Environment Playground`**.
-2. Select **`CartPole-v1`** and choose **`DQN (Demonstration Solved Model - 500 Return)`**.
-3. Click **`🏁 Run Episode`** to watch the cart effortlessly balance the pole for the full **500 steps** (cumulative return: `+500.0`).
-4. Highlight that this establishes a verified, incontrovertible proof that the reinforcement learning pipeline and temporal-difference bootstrap mechanics are sound.
+1. Switch to **`🎮 Playground`**.
+2. Select **`CartPole-v1`** and choose **`⭐ DQN (Demonstration Solved)`**.
+3. Click **`Auto Play`** to watch the cart effortlessly balance the pole for the full **500 steps** (cumulative return: `+500.0`).
+4. Point out the live telemetry:
+   - State observation vector (`x`, `v`, `θ`, `ω`)
+   - Q-values for discrete actions
+   - Near-perfect balance proving that the RL bootstrap and training harness are fully functional.
 
-### Part 3: Classical vs. Quantum Head-to-Head Comparison (4 Minutes)
-1. Navigate to **`⚔️ Head-to-Head Arena`**.
-2. Select **`PPO vs Q-PPO on CartPole-v1`** or **`SAC vs Q-SAC on Pendulum-v1`**.
-3. Under **Side-by-Side Visual Playback**, click **`🏁 Start Side-by-Side Duel`** to watch both agents simultaneously interact with the environment.
-4. Switch to **Statistical Batch Duel**, select 15 episodes, and click **`🚀 Execute Batch Duel`**.
-5. Explain the resulting Plotly box plots:
-   - **Q-PPO Advantage**: Q-PPO outperforms Classical PPO across 4 of 5 environments (CartPole: 192.5 vs 108.4; LunarLander: -375.8 vs -568.4; Pendulum: -1353.8 vs -1409.9; BipedalWalker: -143.3 vs -165.4).
-   - **Regularization Mechanism**: Pauli-Z expectation values ($\langle Z_i \rangle \in [-1, 1]$) prevent policy output saturation.
+### Part 3: Human Challenge Arena — Beat the AI (3 Minutes)
+1. Switch to **`🏆 Challenges`**.
+2. Select **`CartPole`** or **`MountainCar`**.
+3. Use the keyboard arrow keys (or on-screen buttons) to manually balance the cart or oscillate the mountain car.
+4. Try to beat the target score:
+   - When the target score is met, celebration confetti fires!
+   - Enter your name or reviewer initials and click **Record** to submit your score to the persistent Leaderboard.
 
-### Part 4: Quantum Circuit & Activation Inspection (3 Minutes)
-1. Navigate to **`🔬 Quantum Architecture Lab`**.
-2. Show the ASCII circuit schematic: 4 qubits, angle encoding $R_y(x_i)$, Depth 2 parameterized rotations ($R_y, R_z$), and entangling CNOT ladders.
-3. Switch to the **Live Quantum Measurement Explorer** tab:
-   - Move the input feature sliders ($x_0, x_1, x_2, x_3$).
-   - Show how the real-time PennyLane circuit rotates the quantum statevector and produces analytic Pauli-Z expectation values $\langle Z_i \rangle$.
-4. Open the **Simulator vs. Hardware Scaling** tab to explain that the wall-clock latency is due to classical statevector matrix simulation ($O(2^n)$ in software), not an inherent limitation of physical quantum hardware ($O(1)$ gate execution).
+### Part 4: Classical vs. Quantum Head-to-Head Duel (3 Minutes)
+1. Switch to **`⚔️ Head-to-Head`**.
+2. Select **`CartPole-v1`**, Model A: **`DQN (Demonstration Solved)`**, Model B: **`Q-DQN`**.
+3. Click **`Execute Batch Duel`** (15 synchronized episodes):
+   - Watch the server simulate identical seeds for both models.
+   - Point out the win-loss split (Classical wins 100% of CartPole duels with mean return ~480 vs ~9.4).
+   - Review the episode-by-episode table showing trajectory divergence.
 
-### Part 5: Controlled Ablations, Robustness & Conclusions (3 Minutes)
-1. Navigate to **`🧩 Ablations & Robustness`**.
-2. Point out the controlled variations:
-   - **Depth 1 vs 2**: 16 gates vs 32 gates.
-   - **Width (2 vs 4 Qubits)**: 4-dim vs 16-dim Hilbert state space.
-   - **Observation Noise Perturbations**: Show that Q-PPO exhibits higher Lipschitz stability against Gaussian observation noise than classical DQN.
-3. Conclude at **`💡 Research Insights`** and demonstrate the one-click **Download Research Report (.md)** button.
+### Part 5: Quantum Architecture & Live PennyLane Simulation (2 Minutes)
+1. Switch to **`⚛️ Quantum Lab`**.
+2. Move the **Input Feature Sliders** ($x_0, x_1, x_2, x_3$):
+   - Point out that PennyLane is executing a real 4-qubit quantum circuit in real time!
+   - Show how the Pauli-Z expectation values ($\langle Z_0 \rangle \dots \langle Z_3 \rangle$) update dynamically.
+   - Review the 16-basis state probability distribution ($|0000\rangle \dots |1111\rangle$).
+3. Scroll to **Computational Scaling & Hardware Bottlenecks**:
+   - Explain that 4-qubit classical simulation (~0.05ms) is 1,000x faster than cloud QPU dispatch (50ms+).
+   - Show the classical memory wall ($2^{30} \approx 16$ GB RAM) vs physical QPUs.
+   - Explain the **Barren Plateau** hazard: $\text{Var}[\partial L/\partial \theta] \propto 1/2^n$.
 
----
+### Part 6: Live Training Studio (2 Minutes)
+1. Switch to **`🏋️ Training Studio`**.
+2. Select **`CartPole-v1`**, Algorithm: **`DQN`**, Steps: **`1,500`**.
+3. Click **`Start Real Training`**:
+   - Point out that this is an actual background PyTorch training job running locally on the laptop.
+   - Observe the live FPS throughput, elapsed timer, and episode reward learning curve updating in real time.
+4. When finished, notice the saved checkpoint and click **`Inspect in Playground`** to test the newly trained weights.
 
-## 🛠️ Feature Walkthrough & Controls
-
-| Tab / View | Key Features | Recommended Use |
-|---|---|---|
-| **🚀 Mission Control** | Status cards, 20-run matrix table, research hypotheses | High-level presentation opening |
-| **🎮 Environment Playground** | 5 Gymnasium environments, Step/Play/Reset, HUD overlay, Deep Action Inspector, Human Challenge Mode | Live interactive demonstration |
-| **⚔️ Head-to-Head Arena** | Side-by-side synchronized rollouts, batch return boxplots, latency comparison | Comparative algorithm analysis |
-| **⚡ Live Training Studio** | Real background training loop, streaming loss/reward curves, safe step limits | Demonstrating live model convergence |
-| **📊 Benchmark Explorer** | Interactive filters, return charts, Pareto frontier, heatmaps, master table | Data deep-dives and examiner Q&A |
-| **🔬 Quantum Lab** | Qubit diagram, slider-controlled Pauli measurement explorer, simulation cost analysis | Explaining the quantum computing theory |
-| **🧩 Ablations & Robustness** | Depth/width scaling tables, observation noise degradation curves | Scientific rigor and methodology proof |
-| **💡 Research Insights** | Evidence-based answers to 10 research questions, Markdown report generator | Presentation closing and takeaways |
-| **🎓 Guided Presentation Tour** | 8-step structured slideshow mode with Next/Previous buttons | Fail-safe rehearsed walkthrough |
-
----
-
-## ⚠️ Troubleshooting & Recovery
-
-- **Port in use (`address already in use: 8501`)**:
-  ```bash
-  streamlit run app.py --server.port=8502
-  ```
-- **Reset Demo State**:
-  Click the **`🔄 Reset Demo State`** button in the sidebar to clear cached sessions.
-- **Run without GUI/Internet**:
-  All models, environments, and dependencies run 100% locally on CPU or GPU without external network access.
-
+### Part 7: Benchmark Explorer & Research Insights (1 Minute)
+1. Switch to **`📊 Benchmarks`**:
+   - Search and sort across the 20 benchmark configurations.
+   - View the **Pareto Frontier** (Return vs Training Time).
+   - View the **Circuit Ablations** and **Noise Robustness** tabs.
+2. Switch to **`📑 Research Insights`**:
+   - Highlight the 8 rigorous research questions answered with empirical data.
+   - Click **`Export Full Research Briefing (.md)`** to demonstrate exportability.
+   - Conclude with the scientific value of a defensible, thoroughly measured comparison study.

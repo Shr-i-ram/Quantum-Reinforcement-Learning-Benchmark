@@ -4,7 +4,8 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?logo=pytorch)](https://pytorch.org/)
 [![PennyLane](https://img.shields.io/badge/PennyLane-0.35+-FFD43B.svg?logo=python)](https://pennylane.ai/)
 [![Gymnasium](https://img.shields.io/badge/Gymnasium-v1.0+-008080.svg)](https://gymnasium.farama.org/)
-[![Live Demo](https://img.shields.io/badge/Interactive%20Platform-Streamlit%20Demo-FF4B4B.svg?logo=streamlit)](app.py)
+[![Web Platform](https://img.shields.io/badge/Web%20Platform-Quantum%20RL%20Arena-06B6D4.svg?logo=react)](run_arena.py)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?logo=fastapi)](server/main.py)
 [![IEEE Paper](https://img.shields.io/badge/Paper-IEEE%20Conference%20PDF-B31B1B.svg?logo=adobeacrobatreader)](IEEE_Quantum_RL_Benchmark_Paper.pdf)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -48,26 +49,29 @@ A comprehensive, reproducible empirical benchmark comparing **Variational Quantu
 
 ---
 
-## 🖥️ Interactive Live Demonstration Platform
+## 🖥️ Quantum RL Arena — Interactive Web Application
 
-The repository includes a modern, research-grade **Streamlit Live Demonstration Application** (`app.py`) designed for university evaluations, professors, and researchers:
+The repository includes a custom, publication-grade web application — **Quantum RL Arena** — built with **FastAPI**, **React 19**, **TypeScript**, **Tailwind CSS**, **PyTorch**, and **PennyLane**:
 
 ```bash
-# Launch the web application locally
-streamlit run app.py
+# Launch the web application locally (auto-builds frontend & launches browser)
+python run_arena.py
+
+# Or on Windows, double-click:
+.\start_arena.bat
 ```
 
-The application automatically opens at `http://localhost:8501` featuring:
+The application automatically opens at `http://localhost:8000` featuring:
 
-1. **🚀 Mission Control**: Benchmark overview, status indicators, and research hypotheses.
-2. **🎮 Environment Playground**: Interactive stepping, speed control (0.5×–5×), real-time HUD telemetry, and a **Deep Action & Quantum Observable Inspector** charting the 4-qubit Pauli-Z expectation values ($\langle Z_i \rangle$). Also includes a **Human Challenge Mode** to test manual control against the trained agents.
-3. **⚔️ Head-to-Head Arena**: Side-by-side synchronized rollouts and statistical batch duel boxplots (PPO vs. Q-PPO, DQN vs. Q-DQN, SAC vs. Q-SAC).
-4. **⚡ Live Training Studio**: Asynchronous background training loop with real-time streaming reward curves and resource safeguards.
-5. **📊 Benchmark Explorer**: Interactive multi-filter Plotly visualizations (Pareto curves, heatmaps, returns) backed by the central Experiment Registry.
-6. **🔬 Quantum Architecture Lab**: Interactive circuit schematic and slider-driven quantum measurement simulator.
-7. **🧩 Ablations & Robustness**: Empirical scaling curves for circuit depth (1 vs. 2), qubit width (2 vs. 4), classical control heads, and observation noise perturbations.
-8. **💡 Research Insights**: Evidence-based answers to all 10 core benchmark questions and one-click exportable research report (`.md`).
-9. **🎓 Guided Presentation Tour**: Curated 8-step walkthrough tailored for a 15-minute university review.
+1. **🚀 Mission Control**: Complete benchmark overview, architecture flow diagram, and quick-start launchpad.
+2. **🎮 Interactive Playground**: Step through all 5 Gymnasium environments with real physics, speed controls (0.3×–2×), live HUD telemetry, and a **Deep Action & Quantum Observable Inspector** charting the 4-qubit Pauli-Z expectation values ($\langle Z_i \rangle$).
+3. **🏆 Human Challenge Arena**: Direct keyboard/touch human control mode (CartPole balance, MountainCar oscillation, LunarLander soft touchdown) with scorecards, celebration confetti, and persistent leaderboard.
+4. **⚔️ Head-to-Head Arena**: Side-by-side synchronized rollouts and statistical batch duel runner across identical seeds (15–25 episodes) with win/loss splits and delta analysis.
+5. **⚛️ Quantum Lab**: Live slider-driven PennyLane circuit simulator calculating instantaneous Pauli-Z expectation values ($\langle Z_0 \rangle \dots \langle Z_3 \rangle$) and 16-basis state probabilities, accompanied by computational scaling analytics (classical simulation memory wall vs. NISQ QPU sampling latencies and barren plateaus).
+6. **🏋️ Live Training Studio**: Asynchronous background training loop with real-time streaming reward curves, step counters, and FPS throughput safeguards. Newly trained checkpoints can be immediately tested in the playground.
+7. **📊 Benchmark Explorer**: Interactive searchable table, Pareto frontiers (return vs. wall-clock time), circuit depth ablations, and perturbation robustness.
+8. **📑 Research Insights & Defense**: Rigorous evidence-based answers to key scientific questions, defense of the negative result, and one-click exportable research report (`.md`).
+9. **🎓 Guided Presentation Tour**: Built-in 8-step review sequence tailored for a 15-minute university committee evaluation.
 
 > [!TIP]
 > See [**`DEMO_GUIDE.md`**](DEMO_GUIDE.md) for the complete 15-minute presentation sequence and controls guide.
