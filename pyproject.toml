@@ -10,7 +10,9 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "Shriram", email = "shriramng2016@gmail.com"}
+    {name = "Shriram Narayanan"},
+    {name = "Evelyn Maria Paulraj"},
+    {name = "Koppesh P"}
 ]
 keywords = [
     "quantum-computing",

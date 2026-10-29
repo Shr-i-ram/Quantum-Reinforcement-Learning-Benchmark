@@ -4,9 +4,12 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?logo=pytorch)](https://pytorch.org/)
 [![PennyLane](https://img.shields.io/badge/PennyLane-0.35+-FFD43B.svg?logo=python)](https://pennylane.ai/)
 [![Gymnasium](https://img.shields.io/badge/Gymnasium-v1.0+-008080.svg)](https://gymnasium.farama.org/)
+[![IEEE Paper](https://img.shields.io/badge/Paper-IEEE%20Conference%20PDF-B31B1B.svg?logo=adobeacrobatreader)](IEEE_Quantum_RL_Benchmark_Paper.pdf)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **"Comparison of Quantum Reinforcement Learning Algorithms in Increasingly Complex Gymnasium Environments"**
+>
+> **Authors:** Shriram Narayanan, Evelyn Maria Paulraj, and Koppesh P
 
 A comprehensive, reproducible empirical benchmark comparing **Variational Quantum Reinforcement Learning (VQC / QRL)** algorithms against state-of-the-art **Classical Deep Reinforcement Learning** baselines across five Gymnasium environments spanning discrete and continuous control, dense and sparse reward landscapes, and low-to-high dimensional observation manifolds.
 
@@ -14,6 +17,7 @@ A comprehensive, reproducible empirical benchmark comparing **Variational Quantu
 
 ## 📑 Table of Contents
 
+- [IEEE Conference Paper](#-ieee-conference-paper)
 - [Overview & Research Objectives](#-overview--research-objectives)
 - [Benchmark Environments & Complexity Tiers](#-benchmark-environments--complexity-tiers)
 - [Algorithmic Architectures](#-algorithmic-architectures)
@@ -37,6 +41,29 @@ A comprehensive, reproducible empirical benchmark comparing **Variational Quantu
 - [Limitations & Scientific Honesty](#-limitations--scientific-honesty)
 - [Repository Structure](#-repository-structure)
 - [License & Citation](#-license--citation)
+
+---
+
+## 📜 IEEE Conference Paper
+
+This repository includes a full, publication-ready **11-page IEEE two-column (`IEEEtran`) conference paper** detailing the theoretical framework, 4-qubit Variational Quantum Circuit (VQC) architectures, adjoint gradient mechanics, parameter broadcasting optimizations, and all 20 empirical benchmark evaluations:
+
+- **Title**: *Empirical Evaluation of 4-Qubit Variational Quantum Reinforcement Learning Across Multi-Tier Discrete and Continuous Gymnasium Environments*
+- **Authors**: Shriram Narayanan, Evelyn Maria Paulraj, and Koppesh P
+- **Compiled PDF (Root)**: [`IEEE_Quantum_RL_Benchmark_Paper.pdf`](IEEE_Quantum_RL_Benchmark_Paper.pdf)
+- **Compiled PDF (`paper/`)**: [`paper/ieee_quantum_rl_benchmark.pdf`](paper/ieee_quantum_rl_benchmark.pdf)
+- **LaTeX Source (`IEEEtran`)**: [`paper/ieee_quantum_rl_benchmark.tex`](paper/ieee_quantum_rl_benchmark.tex)
+
+### Compiling the Paper from Source
+
+From the `paper/` directory, compile using `tectonic` or `pdflatex`:
+
+```bash
+cd paper
+tectonic ieee_quantum_rl_benchmark.tex
+# Or with TeX Live / MiKTeX:
+pdflatex ieee_quantum_rl_benchmark.tex && pdflatex ieee_quantum_rl_benchmark.tex
+```
 
 ---
 
@@ -239,6 +266,10 @@ All generated publication-quality figures are stored in [`quantum_rl_benchmark/r
 |:---:|:---:|
 | ![Runtime vs Performance](quantum_rl_benchmark/results/figures/runtime_vs_performance.png) | ![Training Time Heatmap](quantum_rl_benchmark/results/figures/training_time_heatmap.png) |
 
+### Environment Complexity & Parameter Allocation Profile
+
+![Complexity and Architecture Profile](quantum_rl_benchmark/results/figures/complexity_and_architecture_profile.png)
+
 ---
 
 ## ⚙️ Installation & Setup
@@ -348,6 +379,12 @@ The project includes an interactive visualization and video recording suite in [
 |:---:|:---:|
 | ![Q-SAC Pendulum](quantum_rl_benchmark/results/videos/Q-SAC_Pendulum-v1_simulation.gif) | ![SAC BipedalWalker](quantum_rl_benchmark/results/videos/SAC_BipedalWalker-v3_simulation.gif) |
 
+### 🖼️ Composite Rollout Galleries (Classical vs. Quantum & Full 20-Experiment Matrix)
+
+| Classical vs. Quantum Policy Rollout Comparison (10 Panels) | Complete 20-Experiment Simulation Gallery (4×5 Grid) |
+|:---:|:---:|
+| ![Simulation Snapshots Grid](quantum_rl_benchmark/results/figures/simulation_snapshots_grid.png) | ![All 20 Simulations Grid](quantum_rl_benchmark/results/figures/all_20_simulations_grid.png) |
+
 ### Generate Videos for All 20 Viable Experiments
 
 To batch-generate simulation videos for all 20 viable model-environment combinations in a single pass:
@@ -410,7 +447,8 @@ In keeping with rigorous scientific standards, the following disclosures must be
 ```tree
 Quantum-Reinforcement-Learning-Benchmark/
 ├── .gitattributes                          # Cross-platform line endings and binary spec
-├── .gitignore                              # Clean ignore patterns (venv, checkpoints, cache)
+├── .gitignore                              # Clean ignore patterns (venv, checkpoints, LaTeX build)
+├── IEEE_Quantum_RL_Benchmark_Paper.pdf     # Compiled 11-page IEEE Conference Paper (PDF)
 ├── LICENSE                                 # MIT Open-Source License
 ├── README.md                               # Project documentation & comprehensive benchmark report
 ├── pyproject.toml                          # PEP 517/621 build and installation metadata
@@ -418,6 +456,9 @@ Quantum-Reinforcement-Learning-Benchmark/
 ├── requirements-dev.txt                    # Development, testing, and formatting tools
 ├── run_experiment.py                       # Top-level one-shot benchmark entrypoint
 ├── visualize_agent.py                      # Simulation recording & live HUD visualizer
+├── paper/                                  # IEEE Conference Paper LaTeX source & build
+│   ├── ieee_quantum_rl_benchmark.tex       # Full IEEEtran LaTeX manuscript with TikZ diagrams
+│   └── ieee_quantum_rl_benchmark.pdf       # Compiled IEEE Conference Paper PDF
 └── quantum_rl_benchmark/                   # Main benchmark package
     ├── __init__.py
     ├── orchestrator.py                     # Pipeline orchestration and validation suite
@@ -463,12 +504,11 @@ Quantum-Reinforcement-Learning-Benchmark/
 This project is licensed under the [MIT License](LICENSE).
 
 ```bibtex
-@misc{quantum_rl_benchmark_2026,
-  author = {Shriram},
-  title = {Quantum Reinforcement Learning Benchmark: Comparison of Quantum Reinforcement Learning Algorithms in Increasingly Complex Gymnasium Environments},
-  year = {2026},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/Shr-i-ram/Quantum-Reinforcement-Learning-Benchmark}}
+@inproceedings{narayanan2026quantum_rl_benchmark,
+  author    = {Narayanan, Shriram and Paulraj, Evelyn Maria and P, Koppesh},
+  title     = {Empirical Evaluation of 4-Qubit Variational Quantum Reinforcement Learning Across Multi-Tier Discrete and Continuous Gymnasium Environments},
+  booktitle = {IEEE Conference Proceedings},
+  year      = {2026},
+  url       = {https://github.com/Shr-i-ram/Quantum-Reinforcement-Learning-Benchmark}
 }
 ```

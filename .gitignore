@@ -61,3 +61,16 @@ htmlcov/
 *.log
 *.tmp
 *.bak
+
+# LaTeX Build Artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.xdv
