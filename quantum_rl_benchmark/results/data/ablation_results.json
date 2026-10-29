@@ -1,0 +1,77 @@
+{
+  "depth_ablation": {
+    "depth_1": {
+      "depth": 1,
+      "n_qubits": 4,
+      "trainable_quantum_parameters": 8,
+      "entangling_cnot_gates": 6,
+      "total_quantum_gates": 14,
+      "forward_latency_ms": 26.925979999941774,
+      "backward_latency_ms": 42.237759999989066,
+      "total_step_latency_ms": 69.16373999993084,
+      "sample_output_mean": 0.34243378043174744,
+      "sample_output_std": 0.37122347950935364
+    },
+    "depth_2": {
+      "depth": 2,
+      "n_qubits": 4,
+      "trainable_quantum_parameters": 16,
+      "entangling_cnot_gates": 12,
+      "total_quantum_gates": 28,
+      "forward_latency_ms": 38.03740599993034,
+      "backward_latency_ms": 41.64128000003984,
+      "total_step_latency_ms": 79.67868599997018,
+      "sample_output_mean": 0.3638838827610016,
+      "sample_output_std": 0.37880241870880127
+    }
+  },
+  "width_ablation": {
+    "2_qubits": {
+      "n_qubits": 2,
+      "hilbert_space_dim": 4,
+      "circuit_depth": 2,
+      "trainable_parameters": 8,
+      "entangling_cnot_gates": 4,
+      "forward_latency_ms": 20.609928000048967
+    },
+    "4_qubits": {
+      "n_qubits": 4,
+      "hilbert_space_dim": 16,
+      "circuit_depth": 2,
+      "trainable_parameters": 16,
+      "entangling_cnot_gates": 12,
+      "forward_latency_ms": 38.153259999962756
+    }
+  },
+  "classical_control_ablation": {
+    "hybrid_quantum_4q": {
+      "architecture_type": "hybrid_quantum_vqc",
+      "is_quantum": true,
+      "n_qubits": 4,
+      "circuit_depth": 2,
+      "trainable_parameters": 16,
+      "forward_latency_ms": 39.13537600004929,
+      "backward_latency_ms": 42.191185999981826,
+      "total_step_latency_ms": 81.32656200003112,
+      "output_bounds": [
+        -1.0,
+        1.0
+      ],
+      "description": "4-qubit variational circuit with angle encoding, CNOT ladder, and analytic Pauli-Z measurement."
+    },
+    "classical_control_control": {
+      "architecture_type": "classical_mlp_control",
+      "is_quantum": false,
+      "trainable_parameters": 148,
+      "forward_latency_ms": 0.02125800005160272,
+      "backward_latency_ms": 0.15801199988345616,
+      "total_step_latency_ms": 0.17926999993505888,
+      "speedup_factor_vs_quantum": 453.6515221619323,
+      "output_bounds": [
+        -1.0,
+        1.0
+      ],
+      "description": "Classical MLP control head (4 -> 16 -> 4 with Tanh) matched to the 4D feature representation."
+    }
+  }
+}

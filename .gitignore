@@ -15,11 +15,13 @@ venv.bak/
 
 # Checkpoints and Trained Model Weights
 *.pt
+!*demonstration.pt
 *.pth
 *.ckpt
 *.bin
 quantum_rl_benchmark/results/checkpoints/*
 !quantum_rl_benchmark/results/checkpoints/.gitkeep
+!quantum_rl_benchmark/results/checkpoints/DQN_CartPole-v1_demonstration.pt
 
 # IDEs and Code Editors
 .vscode/

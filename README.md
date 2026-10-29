@@ -4,12 +4,15 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?logo=pytorch)](https://pytorch.org/)
 [![PennyLane](https://img.shields.io/badge/PennyLane-0.35+-FFD43B.svg?logo=python)](https://pennylane.ai/)
 [![Gymnasium](https://img.shields.io/badge/Gymnasium-v1.0+-008080.svg)](https://gymnasium.farama.org/)
+[![Live Demo](https://img.shields.io/badge/Interactive%20Platform-Streamlit%20Demo-FF4B4B.svg?logo=streamlit)](app.py)
 [![IEEE Paper](https://img.shields.io/badge/Paper-IEEE%20Conference%20PDF-B31B1B.svg?logo=adobeacrobatreader)](IEEE_Quantum_RL_Benchmark_Paper.pdf)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **"Comparison of Quantum Reinforcement Learning Algorithms in Increasingly Complex Gymnasium Environments"**
 >
 > **Authors:** Shriram Narayanan, Evelyn Maria Paulraj, and Koppesh P
+>
+> 📖 **Key Documents**: [IEEE Conference Paper (PDF)](IEEE_Quantum_RL_Benchmark_Paper.pdf) | [Interactive Demo Guide](DEMO_GUIDE.md) | [Repository Audit](PROJECT_AUDIT.md) | [Results Summary](RESULTS_SUMMARY.md)
 
 A comprehensive, reproducible empirical benchmark comparing **Variational Quantum Reinforcement Learning (VQC / QRL)** algorithms against state-of-the-art **Classical Deep Reinforcement Learning** baselines across five Gymnasium environments spanning discrete and continuous control, dense and sparse reward landscapes, and low-to-high dimensional observation manifolds.
 
@@ -17,6 +20,7 @@ A comprehensive, reproducible empirical benchmark comparing **Variational Quantu
 
 ## 📑 Table of Contents
 
+- [Interactive Live Demonstration Platform](#-interactive-live-demonstration-platform)
 - [IEEE Conference Paper](#-ieee-conference-paper)
 - [Overview & Research Objectives](#-overview--research-objectives)
 - [Benchmark Environments & Complexity Tiers](#-benchmark-environments--complexity-tiers)
@@ -41,6 +45,32 @@ A comprehensive, reproducible empirical benchmark comparing **Variational Quantu
 - [Limitations & Scientific Honesty](#-limitations--scientific-honesty)
 - [Repository Structure](#-repository-structure)
 - [License & Citation](#-license--citation)
+
+---
+
+## 🖥️ Interactive Live Demonstration Platform
+
+The repository includes a modern, research-grade **Streamlit Live Demonstration Application** (`app.py`) designed for university evaluations, professors, and researchers:
+
+```bash
+# Launch the web application locally
+streamlit run app.py
+```
+
+The application automatically opens at `http://localhost:8501` featuring:
+
+1. **🚀 Mission Control**: Benchmark overview, status indicators, and research hypotheses.
+2. **🎮 Environment Playground**: Interactive stepping, speed control (0.5×–5×), real-time HUD telemetry, and a **Deep Action & Quantum Observable Inspector** charting the 4-qubit Pauli-Z expectation values ($\langle Z_i \rangle$). Also includes a **Human Challenge Mode** to test manual control against the trained agents.
+3. **⚔️ Head-to-Head Arena**: Side-by-side synchronized rollouts and statistical batch duel boxplots (PPO vs. Q-PPO, DQN vs. Q-DQN, SAC vs. Q-SAC).
+4. **⚡ Live Training Studio**: Asynchronous background training loop with real-time streaming reward curves and resource safeguards.
+5. **📊 Benchmark Explorer**: Interactive multi-filter Plotly visualizations (Pareto curves, heatmaps, returns) backed by the central Experiment Registry.
+6. **🔬 Quantum Architecture Lab**: Interactive circuit schematic and slider-driven quantum measurement simulator.
+7. **🧩 Ablations & Robustness**: Empirical scaling curves for circuit depth (1 vs. 2), qubit width (2 vs. 4), classical control heads, and observation noise perturbations.
+8. **💡 Research Insights**: Evidence-based answers to all 10 core benchmark questions and one-click exportable research report (`.md`).
+9. **🎓 Guided Presentation Tour**: Curated 8-step walkthrough tailored for a 15-minute university review.
+
+> [!TIP]
+> See [**`DEMO_GUIDE.md`**](DEMO_GUIDE.md) for the complete 15-minute presentation sequence and controls guide.
 
 ---
 
@@ -448,23 +478,38 @@ In keeping with rigorous scientific standards, the following disclosures must be
 Quantum-Reinforcement-Learning-Benchmark/
 ├── .gitattributes                          # Cross-platform line endings and binary spec
 ├── .gitignore                              # Clean ignore patterns (venv, checkpoints, LaTeX build)
+├── DEMO_GUIDE.md                           # University review presentation sequence & setup guide
 ├── IEEE_Quantum_RL_Benchmark_Paper.pdf     # Compiled 11-page IEEE Conference Paper (PDF)
 ├── LICENSE                                 # MIT Open-Source License
-├── README.md                               # Project documentation & comprehensive benchmark report
+├── PROJECT_AUDIT.md                        # Comprehensive pre-implementation repository audit
+├── README.md                               # Project documentation & benchmark overview
+├── RESULTS_SUMMARY.md                      # Complete empirical findings, baselines & ablations
+├── app.py                                  # Interactive Streamlit Live Demonstration Platform
 ├── pyproject.toml                          # PEP 517/621 build and installation metadata
-├── requirements.txt                        # Core runtime dependencies
+├── requirements.txt                        # Core runtime dependencies (including Streamlit & Plotly)
 ├── requirements-dev.txt                    # Development, testing, and formatting tools
 ├── run_experiment.py                       # Top-level one-shot benchmark entrypoint
 ├── visualize_agent.py                      # Simulation recording & live HUD visualizer
 ├── paper/                                  # IEEE Conference Paper LaTeX source & build
 │   ├── ieee_quantum_rl_benchmark.tex       # Full IEEEtran LaTeX manuscript with TikZ diagrams
 │   └── ieee_quantum_rl_benchmark.pdf       # Compiled IEEE Conference Paper PDF
+├── scripts/                                # Demonstration training & verification utilities
+│   ├── audit_suite.py                      # Automated checkpoint loading & gradient audit
+│   └── train_demonstration_agent.py        # Verified CartPole 500-return reference trainer
+├── tests/                                  # Integration & validation test suite
+│   └── test_demo_and_pipeline.py           # End-to-end environment, model & demo tests
 └── quantum_rl_benchmark/                   # Main benchmark package
     ├── __init__.py
     ├── orchestrator.py                     # Pipeline orchestration and validation suite
     ├── config/
     │   ├── __init__.py
     │   └── settings.py                     # Hyperparameters, budgets & environment matrix
+    ├── demo/                               # Interactive Live Demo application modules
+    │   ├── __init__.py
+    │   ├── engine.py                       # Stepping engine, HUD renderer & action inspector
+    │   ├── styles.py                       # Dark research-console CSS theme
+    │   ├── training_worker.py              # Background asynchronous training manager
+    │   └── views/                          # Mission control, playground, arena, lab, tour
     ├── environments/
     │   ├── __init__.py
     │   ├── complexity.py                   # Complexity metric calculations (entropy, dim)
@@ -482,7 +527,10 @@ Quantum-Reinforcement-Learning-Benchmark/
     │   └── trainer.py                      # Resumable training loop, logging & checkpointing
     ├── evaluation/
     │   ├── __init__.py
-    │   └── evaluator.py                    # Deterministic evaluation & rollout metrics
+    │   ├── ablations.py                    # Depth, width & classical control ablation suite
+    │   ├── baselines.py                    # Random & heuristic baseline policies
+    │   ├── evaluator.py                    # Deterministic evaluation & rollout metrics
+    │   └── robustness.py                   # Multi-seed & observation noise perturbation tests
     ├── metrics/
     │   ├── __init__.py
     │   └── metrics.py                      # AULC, sample efficiency & stability statistics
@@ -490,8 +538,9 @@ Quantum-Reinforcement-Learning-Benchmark/
     │   ├── __init__.py
     │   └── plots.py                        # Publication-quality plotting suite (PNG & PDF)
     └── results/                            # Benchmark artifacts
-        ├── checkpoints/                    # Model weights (.pt)
+        ├── checkpoints/                    # Model weights (.pt) including demonstration model
         ├── data/                           # Evaluated metrics JSON and system info
+        ├── experiment_registry.json        # Central manifest of all 20 runs + baselines + ablations
         ├── figures/                        # High-resolution PNG & PDF visualizations
         ├── logs/                           # Per-run progress logs
         └── videos/                         # 30 FPS HUD animated simulation recordings (.gif)
